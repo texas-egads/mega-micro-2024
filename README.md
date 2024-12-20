@@ -23,7 +23,7 @@
 --------------------------------------------------------------------------------
 
 
-Welcome to the **EGaDS 2022 Mega-Micro-jam!** This is a one-of-a-kind game jam inspired by WarioWare style games: participants create micro-games that can be completed in just 4-8 seconds, and after the jam we combine everyone’s minigames into one big project for everyone to play! You can find our previous Mega-Micro games on our [itch](https://egads-austin.itch.io/).
+Welcome to the **EGaDS 2024 Mega-Micro-jam!** This is a one-of-a-kind game jam inspired by WarioWare style games: participants create micro-games that can be completed in just 4-8 seconds, and after the jam we combine everyone’s minigames into one big project for everyone to play! You can find our previous Mega-Micro games on our [itch](https://egads-austin.itch.io/).
 
 The jam will last from the **27th of December at 1 pm CT until 11:59 pm CT on Janurary 3rd.**
 
