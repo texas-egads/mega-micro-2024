@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static IMinigamesManager;
 
 public class MinigamesManager : MonoBehaviour, IMinigamesManager
 {
@@ -17,6 +18,8 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
     public Action<MinigameStatus, Action> OnBeginIntermission;
     public Action<MinigameDefinition> OnStartMinigame;
     public Action OnEndMinigame;
+
+    public Difficulty minigameDifficulty;
 
     private MinigameStatus status;
     private List<MinigameDefinition> minigames;
@@ -119,6 +122,11 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
         if (!isMinigamePlaying)
             return;
         isCurrentMinigameWon = false;
+    }
+
+    public Difficulty GetCurrentMinigameDifficulty()
+    {
+        return minigameDifficulty;
     }
 
     public void EndCurrentMinigame(float delay = 0) {

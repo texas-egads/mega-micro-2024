@@ -12,6 +12,7 @@ namespace TEAM_NAME_SPACE{
         public TextMeshProUGUI UIText;
         public string startText;
         public string winText;
+        public bool showDifficultyInStartText;
 
         public AudioClip loopSound;
         public AudioClip winSound;
@@ -19,6 +20,11 @@ namespace TEAM_NAME_SPACE{
         private void Start()
         {
             UIText.text = startText;
+
+            if(showDifficultyInStartText)
+            {
+                UIText.text += $" on {Managers.MinigamesManager.GetCurrentMinigameDifficulty().ToString()}";
+            }
             
             AudioSource loop = Managers.AudioManager.CreateAudioSource();
             loop.loop = true;
