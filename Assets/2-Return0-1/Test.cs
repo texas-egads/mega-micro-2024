@@ -14,23 +14,28 @@ namespace Return0
         {
             Debug.Log("Hello!");
             canSwing = true;
+            if (this.gameObject.GetComponent<Animator>()) animator = this.gameObject.GetComponent<Animator>();
+            else Debug.Log("<color=red>Animator not found!</color>");
         }
 
         private void Update()
         {
             float axisSpace = Input.GetAxisRaw("Space");
 
-            if (axisSpace > 0 && canSwing)
+            if (axisSpace > 0 && canSwing && animator)
             {
                 Debug.Log("SPace hit");
                 canSwing = false;
+                if(animator) animator.SetBool("SpacePressed", true);
                 StartCoroutine(StartSwingDelay());
             }
         }
 
         IEnumerator StartSwingDelay()
         {
+            
             yield return new WaitForSeconds(swingDelay);
+            if (animator) animator.SetBool("SpacePressed", false);
             canSwing = true;
             Debug.Log("can swing again");
         }
