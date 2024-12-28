@@ -38,9 +38,17 @@ namespace Return0
         // Update is called once per frame
         void Update()
         {
-            currentTime += Time.deltaTime;
-            if (currentTime >= throwTime) ballThrow = true;
-            ThrowBall();
+            if (!ballThrow)
+            {
+                currentTime += Time.deltaTime;
+                if (currentTime >= throwTime)
+                {
+                    ballThrow = true;
+                    ThrowBall();
+                    // set current time to 0 so throw ball isn't called again
+                    currentTime = 0;
+                }
+            }
         }
 
         void ThrowBall()
@@ -53,11 +61,41 @@ namespace Return0
                 ball.SetActive(true);
                 //Ball index goes 0 for hi, 1 fo mid & 2 for lo, subject to change
 
+                // choose random int for pitch type
+                int pitchType = Random.Range(0, 3);
+                Debug.Log(pitchType);
+                
+                if (ballAnimator)
+                {
+                    // choose different pitch based on pitchType
+                    switch (pitchType) 
+                    {
+                        case 0:
+                            Debug.Log("High ball!");
+                            ballAnimator.SetInteger("PitchIndex", 0);
+                            if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
+                            ballThrow = false;
+                            break;
+                        case 1:
+                            Debug.Log("Fast ball!");
+                            ballAnimator.SetInteger("PitchIndex", 1);
+                            if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
+                            ballThrow = false;
+                            break;
+                        case 2:
+                            Debug.Log("Low ball!");
+                            ballAnimator.SetInteger("PitchIndex", 2);
+                            if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
+                            ballThrow = false;
+                            break;
+                        default:
+                            break;
+                    }
+                    
 
+                }
+                
 
-                //TODO: add SetInteger lines into a switch statement for the different pitches
-                if (ballAnimator) ballAnimator.SetInteger("PitchIndex", 1);
-                if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
             }
         }
     }
