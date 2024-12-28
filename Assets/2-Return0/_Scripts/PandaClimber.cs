@@ -7,19 +7,59 @@ namespace Return0
 {
     public class PandaClimber : MonoBehaviour
     {
-        private int inputsPressed = 0;
+        public TextMeshProUGUI UITextInstructions;
+        public TextMeshProUGUI UITextWin;
 
+        public string startText;
+        public string winText;
+        public bool gameLost = false;
+
+        public AudioClip loopSound;
+        public AudioClip winSound;
+
+
+        private int inputsPressed = 0;
         [SerializeField] private GameObject[] gripsPrefabs = new GameObject[4];
         [SerializeField] private GameObject[] grips = new GameObject[10];
 
         void Start()
         {
+            UITextInstructions.text = startText;
+            UITextWin.text = "";
+
+            AudioSource loop = Managers.AudioManager.CreateAudioSource();
+            loop.loop = true;
+            loop.clip = loopSound;
+            loop.Play();
+
             RandomGripsGenerator();
         }
 
         void Update()
         {
-            PlayerInputsRecording();
+            if (inputsPressed == 10) 
+            {
+                Debug.Log("game won");
+                UITextWin.text = winText;
+
+                AudioSource win = Managers.AudioManager.CreateAudioSource();
+                win.PlayOneShot(winSound);
+  
+                Managers.MinigamesManager.DeclareCurrentMinigameWon();
+                Managers.MinigamesManager.EndCurrentMinigame(2); //2 = seconds delay for animation
+                inputsPressed++;
+            }
+            else if (inputsPressed < 10)
+            {
+                if (!gameLost)
+                {
+                    PlayerInputsReading();
+                }
+            }
+            else
+            {
+                this.enabled = false;
+            }
         }
 
         public void RandomGripsGenerator()
@@ -33,70 +73,72 @@ namespace Return0
             }
         }
 
-        public void PlayerInputsRecording()
+        public void PlayerInputsReading()
         {
             Grip.Inputs currentInput;
             if (Input.GetKeyDown(KeyCode.W))
             {
-                Debug.Log("inputs " + inputsPressed);
                 currentInput = Grip.Inputs.W;
-                Debug.Log(grips[inputsPressed].GetComponent<Grip>().inputValue);
+
                 if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
                 {
                    transform.position = grips[inputsPressed].transform.position; //jump to next position
                 }
                 else
                 {
-                    Debug.Log("Game lost");
-                    Managers.MinigamesManager.DeclareCurrentMinigameLost();
+                    GameOver();
                 }
                 inputsPressed++;
             }
             if (Input.GetKeyDown(KeyCode.A))
             {
-                Debug.Log("inputs " + inputsPressed);
                 currentInput = Grip.Inputs.A;
-                Debug.Log(grips[inputsPressed].GetComponent<Grip>().inputValue);
+
                 if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
                 {
                     transform.position = grips[inputsPressed].transform.position; //jump to next position
                 }
                 else
                 {
-                    Debug.Log("Game lost");
-                    Managers.MinigamesManager.DeclareCurrentMinigameLost();
+                    GameOver();
                 }
                 inputsPressed++;
             }
             if (Input.GetKeyDown(KeyCode.S))
             {
                 currentInput = Grip.Inputs.S;
-                Debug.Log(grips[inputsPressed].GetComponent<Grip>().inputValue);
+         
                 if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
                 {
                     transform.position = grips[inputsPressed].transform.position; //jump to next position
                 }
                 else
                 {
-                    Debug.Log("Game lost");
-                    Managers.MinigamesManager.DeclareCurrentMinigameLost();
+                    GameOver();
                 }
                 inputsPressed++;
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
                 currentInput = Grip.Inputs.D;
-                Debug.Log(grips[inputsPressed].GetComponent<Grip>().inputValue);
+
                 if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
                 {
                     transform.position = grips[inputsPressed].transform.position; //jump to next position
                 }
                 else
                 {
-                    Managers.MinigamesManager.DeclareCurrentMinigameLost();
+                    GameOver();
                 }
                 inputsPressed++;
             }
+        }
+        public void GameOver()
+        {
+            Debug.Log("Game lost");
+            gameLost = true;
+            Managers.MinigamesManager.DeclareCurrentMinigameLost();
+            Managers.MinigamesManager.EndCurrentMinigame(2); //2 = seconds delay for animation
         }
     }
 }
