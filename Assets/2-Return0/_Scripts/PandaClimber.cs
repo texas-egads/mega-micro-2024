@@ -58,6 +58,7 @@ namespace Return0
             {
                 if (!gameLost)
                 {
+                    UpdateCamera();
                     PlayerInputsReading();
                 }
             }
@@ -78,6 +79,18 @@ namespace Return0
             }
         }
 
+        public void UpdateCamera()
+        {
+            if (Camera.main.transform.position.y <= 0) //checking bottom bounds, resets y if below 0.
+            {
+                Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, 0, -9);
+            }
+            else if (Camera.main.transform.position != transform.position) //if they don't match, move camera towards player
+            {
+                Vector2 newPos = Vector2.Lerp(Camera.main.transform.position, transform.position, Time.deltaTime); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
+                Camera.main.transform.position = new Vector3(newPos.x,newPos.y,-9);
+            }
+        }
         public void PlayerInputsReading()
         {
             Grip.Inputs currentInput;
