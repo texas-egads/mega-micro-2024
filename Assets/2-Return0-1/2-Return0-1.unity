@@ -992,7 +992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1829059865}
-  throwTime: 0
+  maxThrowTime: 2.5
   ballThrow: 0
 --- !u!1 &1663481702
 GameObject:

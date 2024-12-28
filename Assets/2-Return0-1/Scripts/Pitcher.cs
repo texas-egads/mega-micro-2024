@@ -7,7 +7,8 @@ namespace Return0
     {
         public GameObject ball;
         Animator ballAnimator;
-        public float throwTime;
+        float throwTime;
+        public float maxThrowTime;
         public bool ballThrow;
         float currentTime;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,7 +23,7 @@ namespace Return0
             {
                 Debug.Log("not found");
             }
-            throwTime = Random.Range(0.5f, 2.5f);
+            throwTime = Random.Range(0.5f, maxThrowTime);
             ball.SetActive(false);
             ballThrow = false;
         }
