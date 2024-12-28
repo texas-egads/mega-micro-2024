@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f70ae62a40d3479f63f59c4f9c407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputValue: 1
-  pressed: 0
+  inputValue: 0
 --- !u!212 &2239455521371700235
 SpriteRenderer:
   m_ObjectHideFlags: 0

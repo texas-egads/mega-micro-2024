@@ -28,8 +28,7 @@ namespace Return0
             for (int i = 0; i < grips.Length; i++)
             {
                 Debug.Log("Random Grips Generated");
-                //int rInt = Random.Range(0, 4);
-                int rInt = 0; //TEST
+                int rInt = Random.Range(0, 4);
                 grips[i] = Instantiate(gripsPrefabs[rInt], grips[i].transform.position, grips[i].transform.rotation);
             }
         }
@@ -37,20 +36,67 @@ namespace Return0
         public void PlayerInputsRecording()
         {
             Grip.Inputs currentInput;
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W))
             {
+                Debug.Log("inputs " + inputsPressed);
                 currentInput = Grip.Inputs.W;
+                Debug.Log(grips[inputsPressed].GetComponent<Grip>().inputValue);
                 if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
                 {
-                   transform.position = grips[inputsPressed].transform.position;
+                   transform.position = grips[inputsPressed].transform.position; //jump to next position
+                }
+                else
+                {
+                    Debug.Log("Game lost");
+                    Managers.MinigamesManager.DeclareCurrentMinigameLost();
+                }
+                inputsPressed++;
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                Debug.Log("inputs " + inputsPressed);
+                currentInput = Grip.Inputs.A;
+                Debug.Log(grips[inputsPressed].GetComponent<Grip>().inputValue);
+                if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
+                {
+                    transform.position = grips[inputsPressed].transform.position; //jump to next position
+                }
+                else
+                {
+                    Debug.Log("Game lost");
+                    Managers.MinigamesManager.DeclareCurrentMinigameLost();
+                }
+                inputsPressed++;
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                currentInput = Grip.Inputs.S;
+                Debug.Log(grips[inputsPressed].GetComponent<Grip>().inputValue);
+                if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
+                {
+                    transform.position = grips[inputsPressed].transform.position; //jump to next position
+                }
+                else
+                {
+                    Debug.Log("Game lost");
+                    Managers.MinigamesManager.DeclareCurrentMinigameLost();
+                }
+                inputsPressed++;
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                currentInput = Grip.Inputs.D;
+                Debug.Log(grips[inputsPressed].GetComponent<Grip>().inputValue);
+                if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
+                {
+                    transform.position = grips[inputsPressed].transform.position; //jump to next position
                 }
                 else
                 {
                     Managers.MinigamesManager.DeclareCurrentMinigameLost();
                 }
+                inputsPressed++;
             }
-           
-            inputsPressed++;
         }
     }
 }
