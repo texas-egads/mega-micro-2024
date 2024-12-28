@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 2-Return0
   minigameType: 0
-  gameTime: 6857
-  instruction: 
+  gameTime: 10286
+  instruction: Climb!
   title: PandaClimbing
   creditsText: 
   minigameScreenshot: {fileID: 0}
