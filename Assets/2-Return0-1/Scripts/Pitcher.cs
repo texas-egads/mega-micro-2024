@@ -17,11 +17,11 @@ namespace Return0
             if (this.gameObject.GetComponentInChildren<Animator>())
             {
                 ballAnimator = this.gameObject.GetComponentInChildren<Animator>();
-                Debug.Log("found");
+                //Debug.Log("found");
             }
             else
             {
-                Debug.Log("not found");
+                Debug.Log("<color=red>Animator for ball not found</color>");
             }
             throwTime = Random.Range(0.5f, maxThrowTime);
             ball.SetActive(false);
@@ -38,9 +38,10 @@ namespace Return0
 
         void ThrowBall()
         {
+            //read an index and set the animation controller to pitch a certain ball
             if (ballThrow)
             {
-                Debug.Log("Throw!");
+                //Debug.Log("Throw!");
                 ball.SetActive(true);
                 if (ballAnimator) ballAnimator.SetBool("Throw", true);
             }

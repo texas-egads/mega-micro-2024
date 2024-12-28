@@ -11,6 +11,9 @@ namespace Return0
         Animator animator;
         public GameObject hitBox;
         public List<Transform> hitBoxStances;
+        [SerializeField] float cameraShakeStrenght;
+        [SerializeField] float cameraShakeDelay;
+        [SerializeField] int cameraShakeCycles;
 
         void Start()
         {
@@ -53,12 +56,40 @@ namespace Return0
             animator.SetBool("CanSwing", false);
             yield return new WaitForSeconds(swingDelay);
             animator.SetBool("SpacePressed", false);
+            
         }
 
         private void ChangeHitBoxStance (int _index)
         {
             hitBox.transform.position = hitBoxStances[_index].position;
             //Debug.Log("hitBoxStances[_index].name");
+        }
+
+        //TODO: hit the ball succesfully, add camera shake!!!!
+        public void OnBallHit()
+        {
+            Debug.Log("<color=yellow>Hello!</color>");
+
+            StartCoroutine(ShakeCamera());
+
+            //store win condition
+            //AudioSource win = Managers.AudioManager.CreateAudioSource();
+            //win.PlayOneShot(winSound);
+
+            Managers.MinigamesManager.DeclareCurrentMinigameWon();
+            Managers.MinigamesManager.EndCurrentMinigame(1f);
+        }
+
+        private IEnumerator ShakeCamera()
+        {
+            //cameraTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount; //cam shake
+            Vector3 originalPos = Camera.main.transform.localPosition;
+            for (int i = 0; i < cameraShakeCycles; i++)
+            {
+                Camera.main.transform.localPosition = originalPos + Random.insideUnitSphere * cameraShakeStrenght;
+                yield return new WaitForSeconds(cameraShakeDelay);
+            }
+            Camera.main.transform.localPosition = originalPos;
         }
     }
 
