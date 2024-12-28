@@ -22,8 +22,13 @@ namespace Return0
         [SerializeField] private GameObject[] gripsPrefabs = new GameObject[4];
         [SerializeField] private GameObject[] grips = new GameObject[10];
 
+        [SerializeField] private Transform cameraPos;
+        [SerializeField] private Transform originalPos;
+
         void Start()
         {
+            originalPos = cameraPos;
+
             UITextInstructions.text = startText;
             UITextWin.text = "";
 
@@ -136,6 +141,7 @@ namespace Return0
         public void GameOver()
         {
             Debug.Log("Game lost");
+            //cameraPos.localPosition = originalPos, Random.insideUnitSphere * 2f;
             gameLost = true;
             Managers.MinigamesManager.DeclareCurrentMinigameLost();
             Managers.MinigamesManager.EndCurrentMinigame(2); //2 = seconds delay for animation
