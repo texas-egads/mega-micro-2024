@@ -63,7 +63,7 @@ namespace Return0
 
                 // choose random int for pitch type
                 int pitchType = Random.Range(0, 3);
-                Debug.Log(pitchType);
+                //Debug.Log(pitchType);
                 
                 if (ballAnimator)
                 {
@@ -71,19 +71,19 @@ namespace Return0
                     switch (pitchType) 
                     {
                         case 0:
-                            Debug.Log("High ball!");
+                            //Debug.Log("High ball!");
                             ballAnimator.SetInteger("PitchIndex", 0);
                             if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
                             ballThrow = false;
                             break;
                         case 1:
-                            Debug.Log("Fast ball!");
+                            //Debug.Log("Fast ball!");
                             ballAnimator.SetInteger("PitchIndex", 1);
                             if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
                             ballThrow = false;
                             break;
                         case 2:
-                            Debug.Log("Low ball!");
+                            //Debug.Log("Low ball!");
                             ballAnimator.SetInteger("PitchIndex", 2);
                             if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
                             ballThrow = false;

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace Return0 
 {
+    
     public class Batter : MonoBehaviour
     {
         public float swingDelay = 0f;
@@ -14,6 +15,7 @@ namespace Return0
         [SerializeField] float cameraShakeStrenght;
         [SerializeField] float cameraShakeDelay;
         [SerializeField] int cameraShakeCycles;
+        private int stanceIndex;
 
         void Start()
         {
@@ -39,11 +41,15 @@ namespace Return0
                 if (axisSpace > 0 && animator)  //swing bat when space is pressed
                 {
                     //Debug.Log("SPace hit");
+                    animator.SetInteger("StanceIndex", stanceIndex);
                     animator.SetBool("SpacePressed", true);
+                    //TODO: set integer for stance index
+
+                    
 
                     canSwing = false;
                     StartCoroutine(StartSwingDelay());
-                    //TODO: time the hitbox with animation
+                    
                 }
             }
 
@@ -63,12 +69,13 @@ namespace Return0
         {
             hitBox.transform.position = hitBoxStances[_index].position;
             //Debug.Log("hitBoxStances[_index].name");
+            stanceIndex = _index;
         }
 
         //TODO: hit the ball succesfully, add camera shake!!!!
         public void OnBallHit()
         {
-            Debug.Log("<color=yellow>Hello!</color>");
+            Debug.Log("<color=yellow>Home Run!</color>");
 
             StartCoroutine(ShakeCamera());
 
