@@ -9,13 +9,18 @@ namespace Return0
         [SerializeField] Animator ballAnimator;
         [SerializeField] Animator pitcherAnimator;
         float throwTime;
-        public float maxThrowTime;
+        float maxThrowTime;
         public bool ballThrow;
         float currentTime;
+        string difficulty;
+        [SerializeField] float easyMultiplier;
+        [SerializeField] float mediumMultiplier;
+        [SerializeField] float hardMultiplier;
+
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            
+
             //if (this.gameObject.GetComponent<Animator>())
             //{
             //    pitcherAnimator = this.gameObject.GetComponent<Animator>();
@@ -29,10 +34,11 @@ namespace Return0
             //}
             //else Debug.Log("<color=red>Animator for ball not found</color>");
 
-
+            DifficutlyMultiplier();
             throwTime = Random.Range(0.5f, maxThrowTime);
             ball.SetActive(false);
             ballThrow = false;
+            
         }
 
         // Update is called once per frame
@@ -44,6 +50,7 @@ namespace Return0
                 if (currentTime >= throwTime)
                 {
                     ballThrow = true;
+                    
                     ThrowBall();
                     // set current time to 0 so throw ball isn't called again
                     currentTime = 0;
@@ -60,7 +67,7 @@ namespace Return0
                 //Debug.Log("Throw!");
                 ball.SetActive(true);
                 //Ball index goes 0 for hi, 1 fo mid & 2 for lo, subject to change
-
+                
                 // choose random int for pitch type
                 int pitchType = Random.Range(0, 3);
                 //Debug.Log(pitchType);
@@ -97,6 +104,33 @@ namespace Return0
                 
 
             }
+        }
+
+        void DifficutlyMultiplier()
+        {
+            difficulty = Managers.MinigamesManager.GetCurrentMinigameDifficulty().ToString();
+            Debug.Log(difficulty);
+            if (ballAnimator)
+            {
+                switch (difficulty)
+                {
+                    case "EASY":
+                        ballAnimator.speed *= easyMultiplier;
+                        maxThrowTime = 1f;
+                        break;
+                    case "MEDIUM":
+                        ballAnimator.speed *= mediumMultiplier;
+                        maxThrowTime = 2.5f;
+                        break;
+                    case "HARD":
+                        ballAnimator.speed *= hardMultiplier;
+                        maxThrowTime = 3.5f;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
         }
     }
 }

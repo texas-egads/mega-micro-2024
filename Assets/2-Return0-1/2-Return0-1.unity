@@ -1062,8 +1062,10 @@ MonoBehaviour:
   ball: {fileID: 1829059865}
   ballAnimator: {fileID: 1829059866}
   pitcherAnimator: {fileID: 1364734448}
-  maxThrowTime: 2.5
   ballThrow: 0
+  easyMultiplier: 0.65
+  mediumMultiplier: 1
+  hardMultiplier: 1.75
 --- !u!95 &1364734448
 Animator:
   serializedVersion: 7
