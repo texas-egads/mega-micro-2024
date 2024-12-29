@@ -16,6 +16,7 @@ namespace Return0
         [SerializeField] float easyMultiplier;
         [SerializeField] float mediumMultiplier;
         [SerializeField] float hardMultiplier;
+        
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -80,26 +81,21 @@ namespace Return0
                         case 0:
                             //Debug.Log("High ball!");
                             ballAnimator.SetInteger("PitchIndex", 0);
-                            if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
-                            ballThrow = false;
                             break;
                         case 1:
                             //Debug.Log("Fast ball!");
                             ballAnimator.SetInteger("PitchIndex", 1);
-                            if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
-                            ballThrow = false;
                             break;
                         case 2:
                             //Debug.Log("Low ball!");
                             ballAnimator.SetInteger("PitchIndex", 2);
-                            if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
-                            ballThrow = false;
                             break;
                         default:
                             break;
                     }
-                    
 
+                    if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
+                    ballThrow = false;
                 }
                 
 

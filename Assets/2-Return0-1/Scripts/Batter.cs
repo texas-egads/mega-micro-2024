@@ -16,6 +16,7 @@ namespace Return0
         [SerializeField] float cameraShakeDelay;
         [SerializeField] int cameraShakeCycles;
         private int stanceIndex;
+        [SerializeField] AudioClip baseballHit;
 
         void Start()
         {
@@ -80,8 +81,8 @@ namespace Return0
             StartCoroutine(ShakeCamera());
 
             //store win condition
-            //AudioSource win = Managers.AudioManager.CreateAudioSource();
-            //win.PlayOneShot(winSound);
+            AudioSource win = Managers.AudioManager.CreateAudioSource();
+            if(baseballHit) win.PlayOneShot(baseballHit);
 
             Managers.MinigamesManager.DeclareCurrentMinigameWon();
             Managers.MinigamesManager.EndCurrentMinigame(1f);
