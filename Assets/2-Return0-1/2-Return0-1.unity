@@ -5526,6 +5526,7 @@ MonoBehaviour:
   cameraShakeDelay: 0.025
   cameraShakeCycles: 10
   baseballHit: {fileID: 8300000, guid: 74d52396135cb314a9571e7fb0fa19d8, type: 3}
+  homerunParticle: {fileID: 232572968}
 --- !u!1 &756822758
 GameObject:
   m_ObjectHideFlags: 0
