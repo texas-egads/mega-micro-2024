@@ -17,6 +17,7 @@ namespace Return0
         [SerializeField] int cameraShakeCycles;
         private int stanceIndex;
         [SerializeField] AudioClip baseballHit;
+        [SerializeField] ParticleSystem homerunParticle;
 
         void Start()
         {
@@ -77,7 +78,7 @@ namespace Return0
         public void OnBallHit()
         {
             Debug.Log("<color=yellow>Home Run!</color>");
-
+            homerunParticle.Play();
             StartCoroutine(ShakeCamera());
 
             //store win condition
