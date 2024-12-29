@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Return0
 {
@@ -16,9 +15,16 @@ namespace Return0
 
         public AudioClip loopSound;
         public AudioClip winSound;
+        public AudioClip jumpSound;
+        public AudioClip jumpSound2;
+
+        AudioSource jump;
 
         private int inputsPressed = 0;
-        [SerializeField] private GameObject[] gripsPrefabs = new GameObject[4];
+        private int rInt;
+
+        [SerializeField] private GameObject[] normalGripsPrefabs = new GameObject[4];
+        [SerializeField] private GameObject[] goldGripsPrefabs = new GameObject[4];
         public static GameObject[] grips;
 
 
@@ -35,11 +41,16 @@ namespace Return0
             loop.clip = loopSound;
             loop.Play();
 
+            jump = Managers.AudioManager.CreateAudioSource();
+            jump.volume = 0.5f;
+
             RandomGripsGenerator();
+
         }
 
         void Update()
         {
+
             if (inputsPressed == DifficultyChanger.count) 
             {
                 Debug.Log("game won");
@@ -71,10 +82,19 @@ namespace Return0
             
             for (int i = 0; i < grips.Length; i++)
             {
-                Debug.Log("Random Grips Generated");
-                int rInt = Random.Range(0, 4);
-                grips[i] = Instantiate(gripsPrefabs[rInt], grips[i].transform.position, grips[i].transform.rotation);
+                rInt = Random.Range(0, 4);
+                grips[i] = Instantiate(normalGripsPrefabs[rInt], grips[i].transform.position, grips[i].transform.rotation);
+                Debug.Log("<color=yellow>grips: </color>" + grips[i]);
             }
+            NextInputGolden();
+        }
+
+        public void NextInputGolden()
+        {
+            Grip.Inputs nextInput = grips[inputsPressed].GetComponent<Grip>().inputValue;
+            Debug.Log("<color=red>next Input: </color>" + nextInput);
+            int n = (int)nextInput;
+            grips[inputsPressed] = Instantiate(goldGripsPrefabs[n], grips[inputsPressed].transform.position, grips[inputsPressed].transform.rotation);
         }
 
         public void UpdateCamera()
@@ -91,22 +111,24 @@ namespace Return0
             }
             
         }
+
         public void PlayerInputsReading()
         {
             Grip.Inputs currentInput;
+
             if (Input.GetKeyDown(KeyCode.W))
             {
                 currentInput = Grip.Inputs.W;
 
                 if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
                 {
-                   transform.position = grips[inputsPressed].transform.position; //jump to next position
+                    JumptToNextPosition();
                 }
                 else
                 {
                     GameOver();
                 }
-                inputsPressed++;
+
             }
             if (Input.GetKeyDown(KeyCode.A))
             {
@@ -114,13 +136,13 @@ namespace Return0
 
                 if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
                 {
-                    transform.position = grips[inputsPressed].transform.position; //jump to next position
+                    JumptToNextPosition();
                 }
                 else
                 {
                     GameOver();
                 }
-                inputsPressed++;
+
             }
             if (Input.GetKeyDown(KeyCode.S))
             {
@@ -128,13 +150,13 @@ namespace Return0
          
                 if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
                 {
-                    transform.position = grips[inputsPressed].transform.position; //jump to next position
+                    JumptToNextPosition();
                 }
                 else
                 {
                     GameOver();
                 }
-                inputsPressed++;
+
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
@@ -142,17 +164,26 @@ namespace Return0
 
                 if (currentInput == grips[inputsPressed].GetComponent<Grip>().inputValue)
                 {
-                    transform.position = grips[inputsPressed].transform.position; //jump to next position
+                    JumptToNextPosition();
                 }
                 else
                 {
                     GameOver();
                 }
-                inputsPressed++;
             }
+
         }
 
 
+        private void JumptToNextPosition()
+        {
+            jump.pitch += 0.2f;
+            jump.PlayOneShot(jumpSound);
+            
+            transform.position = grips[inputsPressed].transform.position; //jump to next position
+            inputsPressed++;
+            NextInputGolden();
+        }
         private IEnumerator ShakeCamera()
         {
             Vector3 originalPos = Camera.main.transform.localPosition;

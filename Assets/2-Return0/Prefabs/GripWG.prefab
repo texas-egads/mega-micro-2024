@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -2634892661772881570}
   - component: {fileID: 2239455521371700235}
   m_Layer: 0
-  m_Name: GripW
+  m_Name: GripWG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,8 +89,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 8179097974903461411, guid: 92c464a2d8089e14abaae4f7b42d4193,
+  m_SortingOrder: 4
+  m_Sprite: {fileID: -5991052760988358842, guid: bfe3ff8d67378cf4b921a5dc3e98b174,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

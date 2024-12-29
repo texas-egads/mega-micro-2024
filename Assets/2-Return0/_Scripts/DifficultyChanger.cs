@@ -29,8 +29,6 @@ namespace Return0
 
         public static void AssignGrips()
         {
-            Debug.Log(PandaClimber.grips);
-            Debug.Log(parentGrips);
             for (int i = 0; i < count; i++)
             {
                 PandaClimber.grips[i] = parentGrips.transform.GetChild(i).gameObject;
