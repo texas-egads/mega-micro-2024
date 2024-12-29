@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,7 +8,6 @@ namespace Return0
 {
     public class PandaClimber : MonoBehaviour
     {
-        public TextMeshProUGUI UITextInstructions;
         public TextMeshProUGUI UITextWin;
 
         public string startText;
@@ -17,15 +17,17 @@ namespace Return0
         public AudioClip loopSound;
         public AudioClip winSound;
 
-
         private int inputsPressed = 0;
         [SerializeField] private GameObject[] gripsPrefabs = new GameObject[4];
-        [SerializeField] private GameObject[] grips = new GameObject[10];
+        public static GameObject[] grips;
 
 
         void Start()
         {
-            UITextInstructions.text = startText;
+            DifficultyChanger.GetGripsCount();
+            grips = new GameObject[DifficultyChanger.count];
+            DifficultyChanger.AssignGrips();
+
             UITextWin.text = "";
 
             AudioSource loop = Managers.AudioManager.CreateAudioSource();
@@ -38,7 +40,7 @@ namespace Return0
 
         void Update()
         {
-            if (inputsPressed == 10) 
+            if (inputsPressed == DifficultyChanger.count) 
             {
                 Debug.Log("game won");
                 UITextWin.text = winText;
@@ -50,7 +52,7 @@ namespace Return0
                 Managers.MinigamesManager.EndCurrentMinigame(2); //2 = seconds delay for animation
                 inputsPressed++;
             }
-            else if (inputsPressed < 10)
+            else if (inputsPressed < DifficultyChanger.count)
             {
                 if (!gameLost)
                 {
@@ -149,10 +151,23 @@ namespace Return0
                 inputsPressed++;
             }
         }
+
+
+        private IEnumerator ShakeCamera()
+        {
+            Vector3 originalPos = Camera.main.transform.localPosition;
+            for (int i = 0; i < 10; i++)
+            {
+                Camera.main.transform.localPosition = originalPos + Random.insideUnitSphere * 0.5f;
+                yield return new WaitForSeconds(0.025f);
+            }
+            Camera.main.transform.localPosition = originalPos;
+        }
+
         public void GameOver()
         {
             Debug.Log("Game lost");
-            //cameraPos.localPosition = originalPos, Random.insideUnitSphere * 2f;
+            StartCoroutine(ShakeCamera());
             gameLost = true;
             Managers.MinigamesManager.DeclareCurrentMinigameLost();
             Managers.MinigamesManager.EndCurrentMinigame(2); //2 = seconds delay for animation
