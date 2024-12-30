@@ -30,9 +30,10 @@ namespace Return0
 
         void Start()
         {
-            DifficultyChanger.GetGripsCount();
+            DifficultyChanger.GetGripsCount(); //easy = 8 inputs(grips), medium = 12, hard = 15
             grips = new GameObject[DifficultyChanger.count];
-            DifficultyChanger.AssignGrips();
+            DifficultyChanger.AssignGrips(); //now we have an "empty" array with a certain amt of elements. Waiting to be filled
+            RandomGripsGenerator();
 
             UITextWin.text = "";
 
@@ -43,8 +44,6 @@ namespace Return0
 
             jump = Managers.AudioManager.CreateAudioSource();
             jump.volume = 0.5f;
-
-            RandomGripsGenerator();
 
         }
 
@@ -61,7 +60,7 @@ namespace Return0
   
                 Managers.MinigamesManager.DeclareCurrentMinigameWon();
                 Managers.MinigamesManager.EndCurrentMinigame(2); //2 = seconds delay for animation
-                inputsPressed++;
+                inputsPressed++; //this is a lazy way to execute this if only once
             }
             else if (inputsPressed < DifficultyChanger.count)
             {
@@ -86,15 +85,22 @@ namespace Return0
                 grips[i] = Instantiate(normalGripsPrefabs[rInt], grips[i].transform.position, grips[i].transform.rotation);
                 Debug.Log("<color=yellow>grips: </color>" + grips[i]);
             }
-            NextInputGolden();
+            NextInputGolden(); //visual cue to help the player detecting the next input
         }
 
         public void NextInputGolden()
         {
-            Grip.Inputs nextInput = grips[inputsPressed].GetComponent<Grip>().inputValue;
-            Debug.Log("<color=red>next Input: </color>" + nextInput);
-            int n = (int)nextInput;
-            grips[inputsPressed] = Instantiate(goldGripsPrefabs[n], grips[inputsPressed].transform.position, grips[inputsPressed].transform.rotation);
+            if (inputsPressed == DifficultyChanger.count)
+            {
+                return;
+            }
+            else
+            {
+                Grip.Inputs nextInput = grips[inputsPressed].GetComponent<Grip>().inputValue;
+                int n = (int)nextInput;
+                grips[inputsPressed] = Instantiate(goldGripsPrefabs[n], grips[inputsPressed].transform.position, grips[inputsPressed].transform.rotation);
+            }
+           
         }
 
         public void UpdateCamera()
@@ -106,7 +112,7 @@ namespace Return0
             }
             if (Camera.main.transform.position != transform.position) //if they don't match, move camera towards player
             {
-                Vector2 newPos = Vector2.Lerp(Camera.main.transform.position, transform.position, Time.deltaTime); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
+                Vector2 newPos = Vector2.Lerp(Camera.main.transform.position, transform.position, Time.deltaTime+0.005f); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
                 Camera.main.transform.position = new Vector3(newPos.x,newPos.y,-9);
             }
             

@@ -2007,7 +2007,7 @@ GameObject:
   - component: {fileID: 1916880274}
   - component: {fileID: 1916880273}
   m_Layer: 0
-  m_Name: Untitled_-_3_0
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
