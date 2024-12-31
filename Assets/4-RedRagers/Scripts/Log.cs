@@ -1,28 +1,39 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+namespace RedRagers
 {
-    Transform tf;
-    float rotationSpeed;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class Log : MonoBehaviour
     {
-        tf = gameObject.GetComponent<Transform>();
-        rotationSpeed = 10;
-    }
+        Transform tf;
+        float rotationSpeed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetAxis("Horizontal") != 0)
+        void Start()
         {
-            rotationSpeed -= 20 * Time.deltaTime * Input.GetAxis("Horizontal");
+            tf = gameObject.GetComponent<Transform>();
+            rotationSpeed = 10;
         }
-        else {
-            rotationSpeed += 5 * Time.deltaTime;
+
+        void Update()
+        {
+            if (Input.GetAxis("Horizontal") != 0)
+            {
+                if (rotationSpeed/Mathf.Abs(rotationSpeed) == Input.GetAxis("Horizontal")) {
+                    rotationSpeed -= 120 * Time.deltaTime * Input.GetAxis("Horizontal");
+                }
+                else {
+                    rotationSpeed -= 60 * Time.deltaTime * Input.GetAxis("Horizontal");
+                }
+            }
+            else
+            {
+                rotationSpeed += 30 * Time.deltaTime;
+            }
+            tf.Rotate(Time.deltaTime * rotationSpeed, 0, 0);
+            if (Input.GetButtonDown("Space"))
+            {
+                Managers.MinigamesManager.DeclareCurrentMinigameWon();
+                Managers.MinigamesManager.EndCurrentMinigame(1f);
+            }
         }
-        Debug.Log(rotationSpeed);
-        tf.Rotate(Time.deltaTime * rotationSpeed,0,0);
     }
 }
