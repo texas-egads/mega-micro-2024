@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 197c81061d7191d45be5c1a5da748e58
+guid: 7fb16e29f44398346bbbbab0d98ab8f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6318071413593973579
-    second: sad panda_0
+      213: -2154906311339108626
+    second: TallStumpDraft_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sad panda_0
+      name: TallStumpDraft_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 185
-        width: 659
-        height: 338
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 371
+        height: 379
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bc5e2f1683b158a0800000000000000
-      internalID: -6318071413593973579
+      spriteID: ee69264802c3812e0800000000000000
+      internalID: -2154906311339108626
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d9d9db85dd1e804449fb03e3bb6d0f78
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sad panda_0: -6318071413593973579
+      TallStumpDraft_0: -2154906311339108626
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

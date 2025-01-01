@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 197c81061d7191d45be5c1a5da748e58
+guid: 0abb79d141246df42b71251f4f98b335
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6318071413593973579
-    second: sad panda_0
+      213: 6839708957216364670
+    second: ArcherLegsDraft_0
+  - first:
+      213: -2840434980433937124
+    second: ArcherLegsDraft_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,10 +51,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 192
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sad panda_0
+      name: ArcherLegsDraft_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 185
-        width: 659
-        height: 338
+        x: 0
+        y: 0
+        width: 247
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bc5e2f1683b158a0800000000000000
-      internalID: -6318071413593973579
+      spriteID: e7850f9ee078bee50800000000000000
+      internalID: 6839708957216364670
       vertices: []
       indices: 
       edges: []
@@ -125,7 +128,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9de64c45a1399dc418221594dbbdb166
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +138,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sad panda_0: -6318071413593973579
+      ArcherLegsDraft_0: 6839708957216364670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

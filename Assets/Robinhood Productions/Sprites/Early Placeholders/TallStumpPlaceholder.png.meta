@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 197c81061d7191d45be5c1a5da748e58
+guid: 6f8b2210d628e4f4a9e4c2d7943c8c1b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6318071413593973579
-    second: sad panda_0
+      213: -2407724141126250645
+    second: TallStumpPlaceholder_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sad panda_0
+      name: TallStumpPlaceholder_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 185
-        width: 659
-        height: 338
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 32
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bc5e2f1683b158a0800000000000000
-      internalID: -6318071413593973579
+      spriteID: b6f890b76ab069ed0800000000000000
+      internalID: -2407724141126250645
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b32d22697fe540a4ab3386dcf0111ef2
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sad panda_0: -6318071413593973579
+      TallStumpPlaceholder_0: -2407724141126250645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e315257133b642640939a9842318b4bf
+guid: 5482beab704f4f147976dae10d66c840
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4767858405185240235
-    second: RedPandaPlaceHolder_0
+      213: 6364465773816295455
+    second: TargetHurtDraft_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RedPandaPlaceHolder_0
+      name: TargetHurtDraft_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 533
-        height: 800
+        width: 316
+        height: 687
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bac3d6455f5da2240800000000000000
-      internalID: 4767858405185240235
+      spriteID: f10b371a6ef135850800000000000000
+      internalID: 6364465773816295455
       vertices: []
       indices: 
       edges: []
