@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d3441d62095824d4985a009a0d4394f4
+guid: 76cf0353a7558ac41b4117b0b4f09616
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7293598183456022363
-    second: Apple_0
+      213: -4188286153577374069
+    second: TargetWorryDraft_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Apple_0
+      name: TargetWorryDraft_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2844
-        height: 3332
+        width: 318
+        height: 687
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5f945b97e0183560800000000000000
-      internalID: 7293598183456022363
+      spriteID: b8e555e0fe730e5c0800000000000000
+      internalID: -4188286153577374069
       vertices: []
       indices: 
       edges: []
