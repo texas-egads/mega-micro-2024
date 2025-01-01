@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   angleMinMax: {x: 0, y: 20}
-  Difficulty: 1
+  difficulty: 1
   step: 0.1
   MaxLineHorizontal: 10
   Line: {fileID: 1422998962}
@@ -651,6 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0d5753d60b833469618cef710340fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!50 &580804673
 Rigidbody2D:
   serializedVersion: 5
@@ -1624,9 +1625,9 @@ SceneRoots:
   - {fileID: 1489627776}
   - {fileID: 217350352}
   - {fileID: 948842571}
+  - {fileID: 1002801101}
   - {fileID: 580804671}
   - {fileID: 739907225}
-  - {fileID: 1002801101}
   - {fileID: 692184101}
   - {fileID: 1255688343}
   - {fileID: 709203541}

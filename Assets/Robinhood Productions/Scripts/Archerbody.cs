@@ -12,6 +12,7 @@ public class Archerbody : MonoBehaviour
 
     float interp = 0f;
     bool spacePushed = false;
+    public AudioClip shootSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -57,6 +58,8 @@ public class Archerbody : MonoBehaviour
             if (Input.GetButtonDown("Space"))
             {
                 spacePushed = true;
+                AudioSource shoot = Managers.AudioManager.CreateAudioSource();
+                shoot.PlayOneShot(shootSound);
             }
         }
     }

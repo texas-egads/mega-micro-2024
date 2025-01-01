@@ -21,9 +21,9 @@ public class BystanderPanda : MonoBehaviour
     {
         if (collision.gameObject.tag == "Object 1")
         {
+            collision.gameObject.tag = "Object 2";
             anim.SetBool("Hit", true);
             Managers.MinigamesManager.EndCurrentMinigame(1f);
-            //print("You shot the Panda!");
         }
     }
 }

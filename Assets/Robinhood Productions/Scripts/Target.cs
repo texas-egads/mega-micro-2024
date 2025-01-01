@@ -6,6 +6,7 @@ public class Target : MonoBehaviour
     BoxCollider2D boxCollider;
     Rigidbody2D rb;
     [SerializeField] Animator anim;
+    public AudioClip winSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,20 +24,22 @@ public class Target : MonoBehaviour
     {
         if (collision.gameObject.tag == "Object 1")
         {
+            collision.gameObject.tag = "Object 2";
             HingeJoint2D hj;
             hj = gameObject.AddComponent<HingeJoint2D>();
             GetComponent<HingeJoint2D>().connectedBody = collision.rigidbody;
             rb.mass = 0.00001f;
-            //boxCollider.material.bounciness = 0;
+
             collision.rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
             collision.rigidbody.linearVelocity = new Vector2(0, 0);
-            //rb.freezeRotation = true;
-            //rb.linearVelocity = new Vector2(0, 0);
-            //rb.bodyType = RigidbodyType2D.Static;
             collision.gameObject.transform.parent = transform;
+
+            AudioSource win = Managers.AudioManager.CreateAudioSource();
+            win.PlayOneShot(winSound);
+
+            anim.SetBool("TargetHit", true);
             Managers.MinigamesManager.DeclareCurrentMinigameWon();
             Managers.MinigamesManager.EndCurrentMinigame(1f);
-            //print("You shot the Apple! Congrats!");
         }
     }
 }
