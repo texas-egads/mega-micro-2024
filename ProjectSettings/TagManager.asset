@@ -8,13 +8,11 @@ TagManager:
   - Object 2
   - Object 3
   - Object 4
-  - Ground
-  - Arrow
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Target
+  - 
   - Water
   - UI
   - 

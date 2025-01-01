@@ -10,7 +10,7 @@ using static UnityEditor.PlayerSettings;
 using static UnityEditor.Progress;
 //using UnityEngine.Windows;
 
-public class MovingArrow : MonoBehaviour
+public class MovingArrow2 : MonoBehaviour
 {
     public int speed;
     public Vector2 angleMinMax;

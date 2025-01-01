@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class Target : MonoBehaviour
+public class Target2 : MonoBehaviour
 {
     BoxCollider2D boxCollider;
     Rigidbody2D rb;

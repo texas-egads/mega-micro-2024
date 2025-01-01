@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BystanderPanda : MonoBehaviour
+public class BystanderPanda2 : MonoBehaviour
 {
     BoxCollider2D boxCollider;
     Animator anim;

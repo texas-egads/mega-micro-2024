@@ -152,9 +152,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  angleMinMax: {x: 0, y: 22.5}
+  angleMinMax: {x: 0, y: 20}
   Difficulty: 1
   step: 0.1
+  MaxLineHorizontal: 10
   Line: {fileID: 1422998962}
   hit: 0
 --- !u!212 &7802712
