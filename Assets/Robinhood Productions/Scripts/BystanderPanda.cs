@@ -4,6 +4,7 @@ public class BystanderPanda : MonoBehaviour
 {
     BoxCollider2D boxCollider;
     Animator anim;
+    public AudioClip loseSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +25,8 @@ public class BystanderPanda : MonoBehaviour
             collision.gameObject.tag = "Object 2";
             anim.SetBool("Hit", true);
             Managers.MinigamesManager.EndCurrentMinigame(1f);
+            AudioSource lose = Managers.AudioManager.CreateAudioSource();
+            lose.PlayOneShot(loseSound);
         }
     }
 }

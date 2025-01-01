@@ -39,7 +39,6 @@ public class MovingArrow : MonoBehaviour
         ArrowBody = GetComponent<Rigidbody2D>();
         initialPos = new Vector2(transform.position.x, transform.position.y);
         difficulty = setDifficulty(difficulty);
-
     }
 
 
@@ -90,6 +89,7 @@ public class MovingArrow : MonoBehaviour
         {
             float deltaAngle = Mathf.Lerp(angleMinMax.x, angleMinMax.y, interp);
             transform.rotation = Quaternion.Euler(Vector3.forward * deltaAngle);
+            transform.position = new Vector3(transform.position.x, Line.transform.position.y, transform.position.z);
             interp += Time.deltaTime * difficulty;
             if (interp > 1.0f)
             {
