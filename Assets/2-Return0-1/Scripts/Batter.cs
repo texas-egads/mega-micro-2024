@@ -18,6 +18,8 @@ namespace Return0
         private int stanceIndex;
         [SerializeField] AudioClip baseballHit;
         [SerializeField] ParticleSystem homerunParticle;
+        private bool canAim;
+
 
         void Start()
         {
@@ -26,6 +28,7 @@ namespace Return0
             if (this.gameObject.GetComponent<Animator>()) animator = this.gameObject.GetComponent<Animator>();
             else Debug.Log("<color=red>Animator not found!</color>");
             animator.SetBool("CanSwing", true);
+            SetPlayerControl();
         }
 
         private void Update()
@@ -35,10 +38,17 @@ namespace Return0
 
             if (canSwing)
             {
-                //TODO: change stance between hi, mid & lo using vert input
-                if (axisVert > 0) ChangeHitBoxStance(0);
-                else if (axisVert == 0) ChangeHitBoxStance(1);
-                else if (axisVert < 0) ChangeHitBoxStance(2);
+                if (canAim)
+                {
+                    if (axisVert > 0) ChangeHitBoxStance(0);
+                    else if (axisVert == 0) ChangeHitBoxStance(1);
+                    else if (axisVert < 0) ChangeHitBoxStance(2);
+                }
+                else
+                {
+                    ChangeHitBoxStance(BaseballManager.pitchType);
+                }
+
 
                 if (axisSpace > 0 && animator)  //swing bat when space is pressed
                 {
@@ -99,6 +109,15 @@ namespace Return0
                 yield return new WaitForSeconds(cameraShakeDelay);
             }
             Camera.main.transform.localPosition = originalPos;
+        }
+
+        private void SetPlayerControl()
+        {
+            if (Managers.MinigamesManager.GetCurrentMinigameDifficulty().ToString() == "EASY")
+            {
+                canAim = false;
+            }
+            else canAim = true;
         }
     }
 

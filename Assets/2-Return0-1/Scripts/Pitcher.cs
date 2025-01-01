@@ -10,12 +10,14 @@ namespace Return0
         [SerializeField] Animator pitcherAnimator;
         float throwTime;
         float maxThrowTime;
-        public bool ballThrow;
+        public bool ballIsThrown;
         float currentTime;
         string difficulty;
         [SerializeField] float easyMultiplier;
         [SerializeField] float mediumMultiplier;
         [SerializeField] float hardMultiplier;
+        //bool pitchStored;
+        bool canCountTime;
         
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,24 +40,23 @@ namespace Return0
             DifficutlyMultiplier();
             throwTime = Random.Range(0.5f, maxThrowTime);
             ball.SetActive(false);
-            ballThrow = false;
+            ballIsThrown = false;
+            canCountTime = true;
             
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (!ballThrow)
+
+            if (canCountTime) currentTime += Time.deltaTime;
+
+            if (currentTime >= throwTime)
             {
-                currentTime += Time.deltaTime;
-                if (currentTime >= throwTime)
-                {
-                    ballThrow = true;
-                    
-                    ThrowBall();
-                    // set current time to 0 so throw ball isn't called again
-                    currentTime = 0;
-                }
+                ThrowBall();
+                ballIsThrown = true;
+                currentTime = 0;        // set current time to 0 so throw ball isn't called again
+                canCountTime = false;   // set bool to false so that time isn't counted anymore
             }
         }
 
@@ -63,16 +64,20 @@ namespace Return0
         {
             
             //read an index and set the animation controller to pitch a certain ball
-            if (ballThrow)
+            if (!ballIsThrown)
             {
-                //Debug.Log("Throw!");
+                Debug.Log("Throw!");
                 ball.SetActive(true);
                 //Ball index goes 0 for hi, 1 fo mid & 2 for lo, subject to change
                 
                 // choose random int for pitch type
                 int pitchType = Random.Range(0, 3);
                 //Debug.Log(pitchType);
-                
+
+                BaseballManager.pitchType = pitchType;
+                //pitchStored = true;
+                Debug.Log("<color=yellow> pitch stored as </color>" + pitchType);
+
                 if (ballAnimator)
                 {
                     // choose different pitch based on pitchType
@@ -95,7 +100,7 @@ namespace Return0
                     }
 
                     if (pitcherAnimator) pitcherAnimator.SetBool("isThrown", true);
-                    ballThrow = false;
+                    ballIsThrown = false;
                 }
                 
 
