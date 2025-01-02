@@ -18,6 +18,8 @@ namespace Return0
         public AudioClip jumpSound;
         public AudioClip jumpSound2;
 
+        [SerializeField]private GameObject[] levelSprites = new GameObject[3];
+
         AudioSource jump;
 
         private int inputsPressed = 0;
@@ -34,6 +36,7 @@ namespace Return0
             grips = new GameObject[DifficultyChanger.count];
             DifficultyChanger.AssignGrips(); //now we have an "empty" array with a certain amt of elements. Waiting to be filled
             RandomGripsGenerator();
+            WallChanger();
 
             UITextWin.text = "";
 
@@ -76,6 +79,28 @@ namespace Return0
             }
         }
 
+        public void WallChanger()
+        {
+            switch (DifficultyChanger.dif)
+            {
+                case "EASY":
+                    levelSprites[0].SetActive(true);
+                    levelSprites[1].SetActive(false);
+                    levelSprites[2].SetActive(false);
+                    break;
+                case "MEDIUM":
+                    levelSprites[0].SetActive(false);
+                    levelSprites[1].SetActive(true);
+                    levelSprites[2].SetActive(false);
+                    break;
+                case "HARD":
+                    levelSprites[0].SetActive(false);
+                    levelSprites[1].SetActive(false);
+                    levelSprites[2].SetActive(true);
+                    break;
+            }
+        }
+
         public void RandomGripsGenerator()
         {
             
@@ -112,7 +137,8 @@ namespace Return0
             }
             if (Camera.main.transform.position != transform.position) //if they don't match, move camera towards player
             {
-                Vector2 newPos = Vector2.Lerp(Camera.main.transform.position, transform.position, Time.deltaTime+0.005f); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
+                Vector2 offsetPos = new Vector2(transform.position.x, transform.position.y+3.21f);
+                Vector2 newPos = Vector2.Lerp(Camera.main.transform.position, offsetPos, Time.deltaTime+0.005f); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
                 Camera.main.transform.position = new Vector3(newPos.x,newPos.y,-9);
             }
             

@@ -22,7 +22,7 @@ namespace Return0
                     count = 12;
                     break;
                 case "HARD":
-                    count = 15;
+                    count = 16;
                     break;
             }
         }
