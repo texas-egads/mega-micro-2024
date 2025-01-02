@@ -55,7 +55,6 @@ namespace Return0
 
             if (inputsPressed == DifficultyChanger.count) 
             {
-                Debug.Log("game won");
                 UITextWin.text = winText;
 
                 AudioSource win = Managers.AudioManager.CreateAudioSource();
@@ -108,7 +107,6 @@ namespace Return0
             {
                 rInt = Random.Range(0, 4);
                 grips[i] = Instantiate(normalGripsPrefabs[rInt], grips[i].transform.position, grips[i].transform.rotation);
-                Debug.Log("<color=yellow>grips: </color>" + grips[i]);
             }
             NextInputGolden(); //visual cue to help the player detecting the next input
         }
@@ -137,7 +135,7 @@ namespace Return0
             }
             if (Camera.main.transform.position != transform.position) //if they don't match, move camera towards player
             {
-                Vector2 offsetPos = new Vector2(transform.position.x, transform.position.y+3.21f);
+                Vector2 offsetPos = new Vector2(transform.position.x, transform.position.y+3.42f);
                 Vector2 newPos = Vector2.Lerp(Camera.main.transform.position, offsetPos, Time.deltaTime+0.005f); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
                 Camera.main.transform.position = new Vector3(newPos.x,newPos.y,-9);
             }
@@ -229,7 +227,6 @@ namespace Return0
 
         public void GameOver()
         {
-            Debug.Log("Game lost");
             StartCoroutine(ShakeCamera());
             gameLost = true;
             Managers.MinigamesManager.DeclareCurrentMinigameLost();
