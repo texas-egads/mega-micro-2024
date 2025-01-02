@@ -4,9 +4,12 @@ public class Background : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public AudioClip loopSound;
+    public GameObject Arrow;
+    bool Hit;
+    AudioSource loop;
     void Start()
     {
-        AudioSource loop = Managers.AudioManager.CreateAudioSource();
+        loop =  Managers.AudioManager.CreateAudioSource();
         loop.loop = true;
         loop.clip = loopSound;
         loop.Play();
@@ -15,6 +18,10 @@ public class Background : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Hit = Arrow.GetComponent<MovingArrow>().hit;
+        if (Hit){
+            loop.loop = false;
+            loop.Stop();
+        }
     }
 }

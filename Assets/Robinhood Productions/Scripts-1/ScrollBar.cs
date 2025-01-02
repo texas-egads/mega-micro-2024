@@ -36,10 +36,15 @@ public class ScrollBar : MonoBehaviour
         if (Input.GetButtonDown("Space"))
         {
             defusing = true;
+            print("defusing");
         }
-        else
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (defusing)
         {
-            defusing = false;
+            Destroy(collision.gameObject);
         }
     }
 }

@@ -17,6 +17,7 @@ public class MovingArrow : MonoBehaviour
     public float difficulty, step, MaxLineHorizontal;
     public LineRenderer Line;
     public bool hit;
+    bool hitPanda=false;
 
     float YDisplace, XDisplace;
     float interp = 0f;
@@ -26,6 +27,8 @@ public class MovingArrow : MonoBehaviour
 
     Vector2 initialPos;
     Rigidbody2D ArrowBody;
+
+    public AudioClip missSound;
 
     enum Difficulty
     {
@@ -71,7 +74,8 @@ public class MovingArrow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!hit){
+        if (!hitPanda)
+        {
             ArrowBody.position = new Vector3(XDisplace + initialPos.x, YDisplace + initialPos.y, 0);
             ArrowBody.rotation = FlyingRotation(fireAngle, time);
         }
@@ -79,8 +83,15 @@ public class MovingArrow : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Object 3" && hit != true)
+        {
+            AudioSource miss = Managers.AudioManager.CreateAudioSource();
+            miss.PlayOneShot(missSound);
+            Managers.MinigamesManager.EndCurrentMinigame(1f);
+        }
+        hit = true;
         if (collision.gameObject.tag == "Object 2") {
-            hit = true;
+            hitPanda = true;
         }
     }
 
