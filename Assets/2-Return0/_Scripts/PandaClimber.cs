@@ -1,6 +1,5 @@
 using System.Collections;
 using TMPro;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 namespace Return0
@@ -17,6 +16,8 @@ namespace Return0
         public AudioClip winSound;
         public AudioClip jumpSound;
         public AudioClip jumpSound2;
+
+        [SerializeField] private Animator _animator;
 
         [SerializeField]private GameObject[] levelSprites = new GameObject[3];
 
@@ -135,7 +136,7 @@ namespace Return0
             }
             if (Camera.main.transform.position != transform.position) //if they don't match, move camera towards player
             {
-                Vector2 offsetPos = new Vector2(transform.position.x, transform.position.y+3.42f);
+                Vector2 offsetPos = new Vector2(transform.position.x, transform.position.y+3.22f);
                 Vector2 newPos = Vector2.Lerp(Camera.main.transform.position, offsetPos, Time.deltaTime+0.005f); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
                 Camera.main.transform.position = new Vector3(newPos.x,newPos.y,-9);
             }
@@ -207,12 +208,21 @@ namespace Return0
 
         private void JumptToNextPosition()
         {
+            _animator.SetBool("hasJumped",true);
+            Invoke("CancelJump", 0.1f);
+
+            //sound
             jump.pitch += 0.2f;
             jump.PlayOneShot(jumpSound);
             
             transform.position = grips[inputsPressed].transform.position; //jump to next position
             inputsPressed++;
             NextInputGolden();
+        }
+
+        public void CancelJump()
+        {
+            _animator.SetBool("hasJumped", false);
         }
         private IEnumerator ShakeCamera()
         {

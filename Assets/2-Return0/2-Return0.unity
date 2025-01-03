@@ -270,8 +270,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: -5643105228771564274, guid: 9a79bb741709a6f4580faa6b84759dcd,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -291,9 +292,9 @@ Transform:
   m_GameObject: {fileID: 16702141}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.21, z: -8}
-  m_LocalScale: {x: 3, y: 3, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: -3.42, z: -8}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.16666667}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -313,7 +314,7 @@ MonoBehaviour:
   startText: Climb!
   winText: You Won!
   gameLost: 0
-  loopSound: {fileID: 8300000, guid: c958d02b32500794a9526e40a0125cc2, type: 3}
+  loopSound: {fileID: 8300000, guid: d2b5f35afd03dba4098ee002223fad92, type: 3}
   winSound: {fileID: 8300000, guid: 338661444fb70164d816238cbaa9fdfa, type: 3}
   jumpSound: {fileID: 8300000, guid: c0a062bb8c23c524f82edc18ddf47ffc, type: 3}
   jumpSound2: {fileID: 8300000, guid: 37288685f4be88b468c046815c4a327f, type: 3}
