@@ -29,11 +29,6 @@ namespace RedRagers
                 rotationSpeed += 30 * Time.deltaTime;
             }
             tf.Rotate(Time.deltaTime * rotationSpeed, 0, 0);
-            if (Input.GetButtonDown("Space"))
-            {
-                Managers.MinigamesManager.DeclareCurrentMinigameWon();
-                Managers.MinigamesManager.EndCurrentMinigame(1f);
-            }
         }
     }
 }
