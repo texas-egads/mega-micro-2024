@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Frontside Rapids_00010_0: 5826853561922481952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Frontside Calm_00003_0: -5533570816325754119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

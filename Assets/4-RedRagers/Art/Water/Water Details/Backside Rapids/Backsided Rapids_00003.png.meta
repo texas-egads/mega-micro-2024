@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Backsided Rapids_00003_0: 6976332935831198411
+      Backsided Rapids_00003_1: -5633309108154320211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
