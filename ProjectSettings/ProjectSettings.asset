@@ -163,7 +163,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Standalone: com.EGaDS.EGaDSMegaMicro-Jam2022
+    Standalone: com.EGaDS-.EGaDS--Mega-Micro
   buildNumber:
     Standalone: 0
     VisionOS: 0
