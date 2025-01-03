@@ -14,6 +14,7 @@ namespace RedRagers
         public float startTime = 6.0f;
         public float timeRemaining;
         public bool timerIsRunning = false;
+        public bool won = false;
         public Player player;
         [HideInInspector] public AudioSource music;
         [HideInInspector] public AudioSource loseSound;
@@ -52,6 +53,7 @@ namespace RedRagers
                 {
                     Managers.MinigamesManager.DeclareCurrentMinigameWon();
                     Debug.Log("You Win!");
+                    won = true;
                     
                     timerIsRunning = false;
                     transform.localScale = new Vector3(timeRemaining, 0, 0);

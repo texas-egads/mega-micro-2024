@@ -7,6 +7,8 @@ namespace RedRagers
         Transform tf;
         public Player player;
         float rotationSpeed;
+        public Animator front_water;
+        public Animator back_water;
 
         void Start()
         {
@@ -16,13 +18,16 @@ namespace RedRagers
 
         void Update()
         {
-            if (Input.GetAxis("Horizontal") != 0)
+            float input = Input.GetAxis("Horizontal");
+            front_water.SetFloat("horizontal", input);
+            back_water.SetFloat("horizontal", input);
+            if (input != 0)
             {
                 if (rotationSpeed/Mathf.Abs(rotationSpeed) == Input.GetAxis("Horizontal")) {
                     rotationSpeed -= 60 * Time.deltaTime * Input.GetAxis("Horizontal");
                 }
                 else {
-                    rotationSpeed -= 60 * Time.deltaTime * Input.GetAxis("Horizontal");
+                    rotationSpeed -= 80 * Time.deltaTime * Input.GetAxis("Horizontal");
                 }
             }
             else
