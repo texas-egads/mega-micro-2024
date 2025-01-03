@@ -248,7 +248,6 @@ namespace Return0
             else
             {
                 //player falling
-                Debug.Log("SUCA");
                 Vector3 fallinPos = new Vector3(transform.position.x, transform.position.y -2f, transform.position.z);
                 Vector2 newPos = Vector2.Lerp(transform.position, fallinPos, Time.deltaTime+ 0.005f); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
                 transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
