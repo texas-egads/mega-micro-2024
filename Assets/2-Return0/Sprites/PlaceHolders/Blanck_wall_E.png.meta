@@ -509,7 +509,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Blanck_wall_E_0: -3764847105768431933
+      Blanck_wall_E_1: -4500083564273146309
+      Blanck_wall_E_10: -3560876865918862506
+      Blanck_wall_E_11: 8419921896528196884
+      Blanck_wall_E_12: -8458293992866805498
+      Blanck_wall_E_13: -8066420660496416681
+      Blanck_wall_E_14: -3234538200674451561
+      Blanck_wall_E_15: 1859619969455144974
+      Blanck_wall_E_2: 5027586352992443633
+      Blanck_wall_E_3: 9086210227886877507
+      Blanck_wall_E_4: -3772169181445196673
+      Blanck_wall_E_5: 9136817596268644406
+      Blanck_wall_E_6: -5841289315385825708
+      Blanck_wall_E_7: -8023774924920791157
+      Blanck_wall_E_8: -5127003367624426394
+      Blanck_wall_E_9: 8747969036143353324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
