@@ -19,6 +19,7 @@ namespace Return0
         [SerializeField] AudioClip baseballHit;
         [SerializeField] ParticleSystem homerunParticle;
         private bool canAim;
+        [SerializeField] AudioClip baseballIntro;
 
 
         void Start()
@@ -29,6 +30,10 @@ namespace Return0
             else Debug.Log("<color=red>Animator not found!</color>");
             animator.SetBool("CanSwing", true);
             SetPlayerControl();
+
+            AudioSource organ = Managers.AudioManager.CreateAudioSource();
+            if (baseballIntro) organ.PlayOneShot(baseballIntro);
+            else Debug.Log("<color=red>Intro Music not Initiallized</color>");
         }
 
         private void Update()
@@ -55,9 +60,6 @@ namespace Return0
                     //Debug.Log("SPace hit");
                     animator.SetInteger("StanceIndex", stanceIndex);
                     animator.SetBool("SpacePressed", true);
-                    //TODO: set integer for stance index
-
-                    
 
                     canSwing = false;
                     StartCoroutine(StartSwingDelay());

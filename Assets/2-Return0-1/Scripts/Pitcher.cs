@@ -66,7 +66,7 @@ namespace Return0
             //read an index and set the animation controller to pitch a certain ball
             if (!ballIsThrown)
             {
-                Debug.Log("Throw!");
+                //Debug.Log("Throw!");
                 ball.SetActive(true);
                 //Ball index goes 0 for hi, 1 fo mid & 2 for lo, subject to change
                 
@@ -76,7 +76,7 @@ namespace Return0
 
                 BaseballManager.pitchType = pitchType;
                 //pitchStored = true;
-                Debug.Log("<color=yellow> pitch stored as </color>" + pitchType);
+                //Debug.Log("<color=yellow> pitch stored as </color>" + pitchType);
 
                 if (ballAnimator)
                 {
@@ -110,7 +110,7 @@ namespace Return0
         void DifficutlyMultiplier()
         {
             difficulty = Managers.MinigamesManager.GetCurrentMinigameDifficulty().ToString();
-            Debug.Log(difficulty);
+            //Debug.Log(difficulty);
             if (ballAnimator)
             {
                 switch (difficulty)
