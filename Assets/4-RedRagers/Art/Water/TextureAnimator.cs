@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class TextureAnimator : MonoBehaviour
 {
-    public Sprite[] animationFrames; // Assign your PNG sprites in the inspector
-    public float frameRate = 60f; // Frames per second
-    public Material targetMaterial; // The material of your 3D object
+    public Sprite[] animationFrames;
+    public float frameRate = 60f;
+    public Material targetMaterial;
 
     private int currentFrame;
     private float timer;
@@ -19,7 +19,6 @@ public class TextureAnimator : MonoBehaviour
             timer -= 1f / frameRate;
             currentFrame = (currentFrame + 1) % animationFrames.Length;
 
-            // Update the material's texture with the current sprite
             targetMaterial.mainTexture = animationFrames[currentFrame].texture;
         }
     }
