@@ -23,7 +23,7 @@ namespace Return0
             }
             else
             {
-                Debug.Log("<color=red>Batter not found</color>");
+                //Debug.Log("<color=red>Batter not found</color>");
             }
 
             

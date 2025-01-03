@@ -24,16 +24,16 @@ namespace Return0
 
         void Start()
         {
-            Debug.Log("Hello!");
+            //Debug.Log("Hello!");
             canSwing = true;
             if (this.gameObject.GetComponent<Animator>()) animator = this.gameObject.GetComponent<Animator>();
-            else Debug.Log("<color=red>Animator not found!</color>");
+            //else Debug.Log("<color=red>Animator not found!</color>");
             animator.SetBool("CanSwing", true);
             SetPlayerControl();
 
             AudioSource organ = Managers.AudioManager.CreateAudioSource();
             if (baseballIntro) organ.PlayOneShot(baseballIntro);
-            else Debug.Log("<color=red>Intro Music not Initiallized</color>");
+            //else Debug.Log("<color=red>Intro Music not Initiallized</color>");
         }
 
         private void Update()
@@ -89,7 +89,7 @@ namespace Return0
         //TODO: hit the ball succesfully, add camera shake!!!!
         public void OnBallHit()
         {
-            Debug.Log("<color=yellow>Home Run!</color>");
+            //Debug.Log("<color=yellow>Home Run!</color>");
             homerunParticle.Play();
             StartCoroutine(ShakeCamera());
 
