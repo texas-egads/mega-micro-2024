@@ -41,6 +41,7 @@ namespace RedRagers
         {
             if (timerIsRunning)
             {
+                
                 if (timeRemaining > 0f)
                 {
                     timeRemaining -= Time.deltaTime;
@@ -51,7 +52,7 @@ namespace RedRagers
                 {
                     Managers.MinigamesManager.DeclareCurrentMinigameWon();
                     Debug.Log("You Win!");
-                    timeRemaining = 0f;
+                    
                     timerIsRunning = false;
                     transform.localScale = new Vector3(timeRemaining, 0, 0);
                     Managers.MinigamesManager.EndCurrentMinigame(1f);
@@ -67,6 +68,8 @@ namespace RedRagers
                     Managers.MinigamesManager.EndCurrentMinigame(1f);
                 }
             }
+            
+
         }
         
     }
