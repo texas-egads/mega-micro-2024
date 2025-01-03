@@ -3,17 +3,21 @@ using UnityEngine;
 public class ScrollBar : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public float speed = 5;
-    //public float DefusingTime = 1;
+    public float speed = 5, delay= 0.5f;
+    float timer = 0;
     public GameObject bar;
     float BarHalfWidth, ScrollWidth, TotalDisplacement;
     Vector2 ScrollRange;
-    public bool defusing;
+    public bool contact;
+    public float defusingTime;
+    BoxCollider2D boxCollider2D;
     void Start()
     {
         ScrollWidth = transform.localScale.x / 2f;
         BarHalfWidth = bar.transform.localScale.x/2f;
         ScrollRange = new Vector2(-(BarHalfWidth-ScrollWidth), BarHalfWidth - ScrollWidth);
+        boxCollider2D = GetComponent<BoxCollider2D>();
+        boxCollider2D.isTrigger = false;
     }
 
     // Update is called once per frame
@@ -35,16 +39,33 @@ public class ScrollBar : MonoBehaviour
 
         if (Input.GetButtonDown("Space"))
         {
-            defusing = true;
-            print("defusing");
+            defusingTime = 0.1f;
         }
+
+        if (defusingTime > 0)
+        {
+            boxCollider2D.isTrigger = true;
+            defusingTime -= Time.deltaTime;
+        }
+        else
+        {
+            boxCollider2D.isTrigger = false;
+        }
+
+        //timer += Time.deltaTime; 
+
+
+
+        //defusing = false;
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (defusing)
+        if (collision.gameObject.tag == "Object 1")
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Wire>().Active = false;
         }
     }
+
 }
