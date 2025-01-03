@@ -55,14 +55,16 @@ namespace Return0
         {
 
             if (inputsPressed == DifficultyChanger.count) 
-            {
+            {//winning conditions met
+
+                _animator.SetBool("GameWonAnimation", true);
                 UITextWin.text = winText;
 
                 AudioSource win = Managers.AudioManager.CreateAudioSource();
                 win.PlayOneShot(winSound);
   
                 Managers.MinigamesManager.DeclareCurrentMinigameWon();
-                Managers.MinigamesManager.EndCurrentMinigame(2); //2 = seconds delay for animation
+                Managers.MinigamesManager.EndCurrentMinigame(2f); //2 = seconds delay for animation
                 inputsPressed++; //this is a lazy way to execute this if only once
             }
             else if (inputsPressed < DifficultyChanger.count)
@@ -71,6 +73,10 @@ namespace Return0
                 {
                     UpdateCamera();
                     PlayerInputsReading();
+                }
+                if (gameLost)
+                {
+                    FallingMovement();
                 }
             }
             else
@@ -136,11 +142,10 @@ namespace Return0
             }
             if (Camera.main.transform.position != transform.position) //if they don't match, move camera towards player
             {
-                Vector2 offsetPos = new Vector2(transform.position.x, transform.position.y+3.22f);
+                Vector2 offsetPos = new Vector2(transform.position.x, transform.position.y+3.03f);
                 Vector2 newPos = Vector2.Lerp(Camera.main.transform.position, offsetPos, Time.deltaTime+0.005f); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
                 Camera.main.transform.position = new Vector3(newPos.x,newPos.y,-9);
             }
-            
         }
 
         public void PlayerInputsReading()
@@ -235,12 +240,32 @@ namespace Return0
             Camera.main.transform.localPosition = originalPos;
         }
 
+        private void FallingMovement()
+        {
+            if (transform.position.x == 0f && transform.position.y == 0f)
+            {
+                return;
+            }
+            else
+            {
+                //player falling
+                Debug.Log("SUCA");
+                Vector3 fallinPos = new Vector3(transform.position.x, transform.position.y -2f, transform.position.z);
+                Vector2 newPos = Vector2.Lerp(transform.position, fallinPos, Time.deltaTime+ 0.005f); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
+                transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
+            }
+        }
         public void GameOver()
         {
+            if (transform.position.y != 0f)
+            {
+                _animator.SetBool("GameFailedAnimation", true); 
+            }
+
             StartCoroutine(ShakeCamera());
             gameLost = true;
             Managers.MinigamesManager.DeclareCurrentMinigameLost();
-            Managers.MinigamesManager.EndCurrentMinigame(2); //2 = seconds delay for animation
+            Managers.MinigamesManager.EndCurrentMinigame(2f); //1 = seconds delay for animation
         }
     }
 }
