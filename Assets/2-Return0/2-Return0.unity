@@ -314,10 +314,9 @@ MonoBehaviour:
   startText: Climb!
   winText: You Won!
   gameLost: 0
-  loopSound: {fileID: 8300000, guid: d2b5f35afd03dba4098ee002223fad92, type: 3}
+  loopSound: {fileID: 8300000, guid: 7339b79c4a5e96e47b07deeb6ff53ab5, type: 3}
   winSound: {fileID: 8300000, guid: 338661444fb70164d816238cbaa9fdfa, type: 3}
   jumpSound: {fileID: 8300000, guid: c0a062bb8c23c524f82edc18ddf47ffc, type: 3}
-  jumpSound2: {fileID: 8300000, guid: 37288685f4be88b468c046815c4a327f, type: 3}
   _animator: {fileID: 16702146}
   levelSprites:
   - {fileID: 384404659}

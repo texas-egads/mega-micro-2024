@@ -17,7 +17,8 @@ MonoBehaviour:
   gameTime: 6857
   instruction: Climb!
   title: PandaClimber
-  creditsText: "Lead game designer and programmer: Riccardo Scaletti\nLead 2D artist:
-    Nicol\xF2 Amelio\nEnvironment artist: Leaonardo Assom"
+  creditsText: "Lead game designer and programmer: Riccardo Scaletti\nProgrammer:
+    Franco Ramos\nLead 2D artist: Nicol\xF2 Amelio\nEnvironment artist: Leaonardo
+    Assom"
   minigameScreenshot: {fileID: -8896702447141653487, guid: bc3194eaa383fcf4b8ee0df919ca3ed7,
     type: 3}

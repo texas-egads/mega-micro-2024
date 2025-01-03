@@ -15,7 +15,6 @@ namespace Return0
         public AudioClip loopSound;
         public AudioClip winSound;
         public AudioClip jumpSound;
-        public AudioClip jumpSound2;
 
         [SerializeField] private Animator _animator;
 
