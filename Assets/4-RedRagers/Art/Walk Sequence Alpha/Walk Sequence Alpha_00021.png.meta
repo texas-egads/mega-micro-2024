@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Walk Sequence Alpha_00021_0: -71707789027394085
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

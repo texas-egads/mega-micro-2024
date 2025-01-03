@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Forward Tilt Alpha_00006_0: 2496690994896775812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
