@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEditor.MPE;
 using UnityEngine;
 
@@ -7,10 +8,14 @@ public class Spawner : MonoBehaviour
     public GameObject Bar, wire;
     Vector2 SpawnRange;
     Collider2D[] colliders;
-    int numberWires, count;
+    public int numberWires, count;
     public float radius;
-
+    Dictionary<Color, KeyCode> WireType = new Dictionary<Color, KeyCode>();
+    List<Color> colors= new List<Color>();
+    public List<GameObject> ActiveWires = new List<GameObject>();
     bool CanSpawn = false;
+    float wireHalfWidth;
+    float BarHalfWidth;
     //public Vector2 boxSize;
 
     enum Difficulty
@@ -19,11 +24,14 @@ public class Spawner : MonoBehaviour
         MEDIUM,
         HARD
     }
+
     void Start()
     {
-       float wireHalfWidth = wire.transform.localScale.x/ 2f;
-        float BarHalfWidth = Bar.transform.localScale.x / 2f;
-        SpawnRange = new Vector2(Bar.transform.position.x - (BarHalfWidth- wireHalfWidth), Bar.transform.position.x + (BarHalfWidth - wireHalfWidth));
+        createDictionary(WireType);
+        createColorList(colors);
+        wireHalfWidth = wire.transform.localScale.x/ 2f;
+        BarHalfWidth = Bar.transform.localScale.x / 2f;
+        SpawnRange = new Vector2(Bar.transform.position.x - (BarHalfWidth- wireHalfWidth), Bar.transform.position.x);
         numberWires = setDifficulty();
     }
 
@@ -49,24 +57,58 @@ public class Spawner : MonoBehaviour
                         break;
                     }
                 }
-                Instantiate(wire, spawnPosition, Quaternion.Euler(Vector3.zero));
+                GameObject wireClone = Instantiate(wire, spawnPosition, Quaternion.Euler(Vector3.zero));
+                int RandomColor = Random.Range(0, colors.Count);
+                wireClone.GetComponent<Wire>().keyCode = WireType[colors[RandomColor]];
+                wireClone.GetComponent<Wire>().code = colors[RandomColor];
+                ActiveWires.Add(wireClone);
                 count++;
+                if (count == numberWires - 1){
+                    SpawnRange = new Vector2(wireClone.transform.position.x + wireClone.transform.localScale.x, Bar.transform.position.x + (BarHalfWidth - wireHalfWidth * 2));
+            }
+                else {
+                    SpawnRange = new Vector2(wireClone.transform.position.x + wireClone.transform.localScale.x, wireClone.transform.position.x + (5 * wireHalfWidth) * count);
+                    print("last: " + SpawnRange + "at " + count);
+                }
             }
      
     }
 
-     bool PreventSpawnOverlap(Vector2 spawnPos)
+    public List<GameObject> getActiveWires()
+    {
+        return ActiveWires;
+    }
+
+    void createDictionary(Dictionary<Color, KeyCode> WireType)
+    {
+        WireType.Add(Color.red, KeyCode.W);
+        WireType.Add(Color.blue, KeyCode.A);
+        WireType.Add(Color.green, KeyCode.S);
+        WireType.Add(Color.yellow, KeyCode.D);
+    }
+
+    void createColorList(List<Color> colorTypes)
+    {
+        colorTypes.Add(Color.red);
+        colorTypes.Add(Color.blue);
+        colorTypes.Add(Color.green);
+        colorTypes.Add(Color.yellow);
+    }
+
+
+    bool PreventSpawnOverlap(Vector2 spawnPos)
     {
         colliders = Physics2D.OverlapCircleAll(transform.position, radius);
-
-        foreach (BoxCollider2D collider in colliders){ 
+        print(colliders.Length);
+        foreach (Collider2D collider in colliders){ 
             Vector3 centerPoint = collider.bounds.center;
             float width = collider.bounds.extents.x;
-
-            float leftExtent = centerPoint.x - width*1.5f;
-            float rightExtent = centerPoint.x + width *1.5f;
+            print(width * 10);
+            float leftExtent = centerPoint.x - width*10f;
+            float rightExtent = centerPoint.x + width *10f;
 
             if (spawnPos.x >= leftExtent && spawnPos.x <= rightExtent) {
+                //print("nope");
                 return false;
             }
         }

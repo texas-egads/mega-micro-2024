@@ -5,6 +5,7 @@ public class Button : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     SpriteRenderer spriteRenderer;
     public KeyCode keyCode;
+    public Color color;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -15,7 +16,7 @@ public class Button : MonoBehaviour
     {
         if (Input.GetKey(keyCode))
         {
-            spriteRenderer.color = Color.red;
+            spriteRenderer.color = color;
         }
         else {
             spriteRenderer.color = Color.white;
