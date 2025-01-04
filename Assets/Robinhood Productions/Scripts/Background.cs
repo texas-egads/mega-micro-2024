@@ -1,27 +1,30 @@
 using UnityEngine;
-
-public class Background : MonoBehaviour
+namespace RobinHoodProductions_0
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public AudioClip loopSound;
-    public GameObject Arrow;
-    bool Hit;
-    AudioSource loop;
-    void Start()
+    public class Background : MonoBehaviour
     {
-        loop =  Managers.AudioManager.CreateAudioSource();
-        loop.loop = true;
-        loop.clip = loopSound;
-        loop.Play();
-    }
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
+        public AudioClip loopSound;
+        public GameObject Arrow;
+        bool Hit;
+        AudioSource loop;
+        void Start()
+        {
+            loop = Managers.AudioManager.CreateAudioSource();
+            loop.loop = true;
+            loop.clip = loopSound;
+            loop.Play();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Hit = Arrow.GetComponent<MovingArrow>().hit;
-        if (Hit){
-            loop.loop = false;
-            loop.Stop();
+        // Update is called once per frame
+        void Update()
+        {
+            Hit = Arrow.GetComponent<MovingArrow>().hit;
+            if (Hit)
+            {
+                loop.loop = false;
+                loop.Stop();
+            }
         }
     }
 }
