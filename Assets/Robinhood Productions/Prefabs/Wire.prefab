@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8817751698482031500}
   - component: {fileID: 2793872988876484464}
-  - component: {fileID: 4920747021380534358}
   - component: {fileID: 3934461082054679310}
+  - component: {fileID: -8301091285764580355}
   m_Layer: 0
   m_Name: Wire
   m_TagString: Object 1
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2298527184112490329}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.06, y: 5.97, z: 0}
   m_LocalScale: {x: 0.5, y: 0.73, z: 1}
   m_ConstrainProportionsScale: 0
@@ -78,9 +78,9 @@ SpriteRenderer:
   m_SortingLayerID: 1419705431
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+  m_Sprite: {fileID: -186421438975577450, guid: 74a6c45176242a044a65a8dfc005a71d,
     type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -90,7 +90,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4920747021380534358
+--- !u!114 &3934461082054679310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298527184112490329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52df7596417afa945946a5f92c05f13a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 0
+  Wires:
+  - {fileID: -186421438975577450, guid: 74a6c45176242a044a65a8dfc005a71d, type: 3}
+  - {fileID: 4876395761771316659, guid: 99a6e6fb4b425534fa94f79e0fb65fbc, type: 3}
+  - {fileID: 903926387867013770, guid: f5ad2bfba7064fb4a83d79688fda058e, type: 3}
+  - {fileID: 7700656103018783479, guid: 8ccd058b8a191034994abaf52d505f56, type: 3}
+  Cutwires:
+  - {fileID: -2761784813863392908, guid: f3331dfdb1f3d8a4bb85e0e7da2933cd, type: 3}
+  - {fileID: 1089367114270935700, guid: 67c3b227693c78044af4a060721a453f, type: 3}
+  - {fileID: 8718281165812042126, guid: daa69c98acd6a204299447c0b9d4f43b, type: 3}
+  - {fileID: -2201274475479088667, guid: 5969d92f2f86b1147801043bf355892f, type: 3}
+  CutWire: {fileID: 0}
+  ActiveWire: {fileID: 0}
+  keyCode: 0
+  code: {r: 1, g: 1, b: 1, a: 0}
+--- !u!61 &-8301091285764580355
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,26 +155,11 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.24, y: 2.54}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.24, y: 2.54}
   m_EdgeRadius: 0
---- !u!114 &3934461082054679310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2298527184112490329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52df7596417afa945946a5f92c05f13a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Active: 0
-  keyCode: 0
-  code: {r: 0, g: 0, b: 0, a: 0}

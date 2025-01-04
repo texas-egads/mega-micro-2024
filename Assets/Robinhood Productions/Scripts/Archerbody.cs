@@ -1,7 +1,7 @@
 using UnityEngine;
 using static IMinigamesManager;
 
-public class Archerbody : MonoBehaviour
+public class RobinHoodProductions_Archerbody : MonoBehaviour
 {
 
     public int speed;

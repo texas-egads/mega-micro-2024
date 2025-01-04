@@ -5,10 +5,9 @@ public class ScrollBar : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public float speed = 5;
-    public GameObject bar, spawner;
-    float BarHalfWidth, ScrollWidth, TotalDisplacement;
-    Vector2 ScrollRange;
-
+    public GameObject bar, gameController;
+    public Animator animator, anim;
+    public AudioClip loseSound, cutWire;
     public bool contact;
     float defusingTime, penaltyTime;
     BoxCollider2D boxCollider2D;
@@ -26,65 +25,43 @@ public class ScrollBar : MonoBehaviour
     }
     void Start()
     {
-        ScrollWidth = transform.localScale.x / 2f;
-        BarHalfWidth = bar.transform.localScale.x/2f;
-        ScrollRange = new Vector2(-(BarHalfWidth-ScrollWidth), BarHalfWidth - ScrollWidth);
         boxCollider2D = GetComponent<BoxCollider2D>();
         boxCollider2D.isTrigger = false;
 
-        startingNumberofWires = setDifficulty();
+        startingNumberofWires = 4;
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        SetWireList();
+        if (!set)
+        {
+            SetWireList();
+        }
 
         if (set)
         {
             currentWire = ActiveWires[wireIndex];
             KeyCode currentWireKey = currentWire.GetComponent<Wire>().keyCode;
-            //print(currentWireKey);
             transform.position = currentWire.transform.position;
-            //int input = (int)Input.GetAxisRaw("Horizontal");
-            //wireIndex += input;
-            /*
-            if (wireIndex < ActiveWires.Count && wireIndex >= 0)
-            {
-                currentWire = ActiveWires[wireIndex];
-                currentWireKey = currentWire.GetComponent<Wire>().keyCode;
-                print(currentWireKey);
-                transform.position = currentWire.transform.position;
-            }
-            else {
-                wireIndex -= input;
-            }
-            */
-            //Vector2 direction = input.normalized;
-            //Vector2 velocity = direction * speed;
-            //Vector2 displacement = velocity * Time.deltaTime;
-
-            /*
-            TotalDisplacement += displacement.x;
-            if (TotalDisplacement < ScrollRange.y && TotalDisplacement > ScrollRange.x)
-            {
-                transform.Translate(displacement);
-            }
-            else {
-                TotalDisplacement -= displacement.x;
-            }
-            */
+           
 
             if (Input.GetKeyDown(currentWireKey))
             {
                 defusingTime = 0.1f;
+                AudioSource cut = Managers.AudioManager.CreateAudioSource();
+                cut.PlayOneShot(cutWire);
 
             }
             else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S))
-            { 
+            {
                 penaltyTime = 0.5f;
-                //Debug.Log("penalty");
+                animator.SetBool("Lose", true);
+                anim.SetBool("Exploded", true);
+                AudioSource lose = Managers.AudioManager.CreateAudioSource();
+                lose.PlayOneShot(loseSound);
+                Managers.MinigamesManager.DeclareCurrentMinigameLost();
+                Managers.MinigamesManager.EndCurrentMinigame(1f);
             }
 
 
@@ -113,28 +90,20 @@ public class ScrollBar : MonoBehaviour
         {
             collision.gameObject.GetComponent<Wire>().Active = false;
             defusingTime = 0f;
-            if (wireIndex < startingNumberofWires-1)
+            if (wireIndex < startingNumberofWires - 1)
             {
                 wireIndex += 1;
             }
         }
     }
 
-    int setDifficulty()
-    {
-        Difficulty level = (Difficulty)(Managers.MinigamesManager.GetCurrentMinigameDifficulty());
-        int Hardness = (int)(level) + 2;
-
-        return Hardness;
-    }
     void SetWireList()
     { 
-            ActiveWires = spawner.GetComponent<Spawner>().getActiveWires();
-            if (ActiveWires.Count == startingNumberofWires)
+            ActiveWires = gameController.GetComponent<GameController>().getWireList();
+            if (ActiveWires.Count == startingNumberofWires && !set)
             {
                 set = true;
             }
-            //Debug.Log(ActiveWires.Count);
     }
 
 }

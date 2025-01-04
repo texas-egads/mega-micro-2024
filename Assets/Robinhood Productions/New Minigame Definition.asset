@@ -15,7 +15,7 @@ MonoBehaviour:
   sceneName: 8-Robinhood productions
   minigameType: 0
   gameTime: 5143
-  instruction: Shoot!
-  title: Panda about to Die
+  instruction: Shoot
+  title: Archer
   creditsText: (Luxi, Jwilson, jdnl12, nokevinlol)Robinhood productions-8
   minigameScreenshot: {fileID: 0}

@@ -7,16 +7,23 @@ public class Wire : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public bool Active;
     SpriteRenderer sprite;
+    public Sprite[] Wires, Cutwires;
+    public Sprite CutWire, ActiveWire;
     public KeyCode keyCode;
     public Color code;
-    BoxCollider2D boxCollider;
-    //Dictionary<string, KeyCode> WireType = new Dictionary<string, KeyCode>();
+    Dictionary<Color, KeyCode> WireType = new Dictionary<Color, KeyCode>();
+    List<Color> colors = new List<Color>();
     void Start()
     {
+        createDictionary(WireType);
+        createColorList(colors);
         Active = true;
         sprite = GetComponent<SpriteRenderer>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        //createDictionary(WireType);
+        int randInt = Random.Range(0, 4);
+        ActiveWire = Wires[randInt];
+        CutWire = Cutwires[randInt];
+        code = colors[randInt];
+        keyCode = WireType[code];
     }
 
     // Update is called once per frame
@@ -24,21 +31,31 @@ public class Wire : MonoBehaviour
     {
         if (!Active)
         {
-            sprite.color = Color.grey;
+            sprite.sprite = CutWire;
         }
         else if (Active)
         {
-            sprite.color = code;
+            sprite.sprite = ActiveWire;
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    void createDictionary(Dictionary<Color, KeyCode> WireType)
     {
-        if (collision.gameObject.tag == "object 1")
-        { 
-            Destroy(collision.gameObject);
-        }
+        WireType.Add(Color.red, KeyCode.W);
+        WireType.Add(Color.blue, KeyCode.A);
+        WireType.Add(Color.green, KeyCode.S);
+        WireType.Add(Color.yellow, KeyCode.D);
     }
+
+    void createColorList(List<Color> colorTypes)
+    {
+        colorTypes.Add(Color.red);
+        colorTypes.Add(Color.blue);
+        colorTypes.Add(Color.green);
+        colorTypes.Add(Color.yellow);
+    }
+
+
 
 
 }
