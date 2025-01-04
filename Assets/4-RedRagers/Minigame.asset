@@ -17,9 +17,15 @@ MonoBehaviour:
   gameTime: 6857
   instruction: Balance
   title: Log Rolling
-  creditsText: 'Example Example - Design
+  creditsText: 'Luximoca - Art
+
+    Anna - Music
 
     Daniel Oake - Programming
 
-    <link=https://discord.gg/rREcZd72Az><color=#8888ff><u>EGaDS!</u></color></link>'
-  minigameScreenshot: {fileID: 0}
+    Miles
+    - Programming
+
+    Donnn - Programming'
+  minigameScreenshot: {fileID: -1713973022834474376, guid: a29b8da57c4a8af4192a2f269a4ec7c3,
+    type: 3}

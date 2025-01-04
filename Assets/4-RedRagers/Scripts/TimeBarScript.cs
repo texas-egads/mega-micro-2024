@@ -45,7 +45,6 @@ namespace RedRagers
         {
             if (timerIsRunning)
             {
-                UnityEngine.Debug.Log(timeRemaining);
                 if (timeRemaining > 0f)
                 {
                     timeRemaining -= Time.deltaTime;
@@ -55,7 +54,6 @@ namespace RedRagers
                 else
                 {
                     Managers.MinigamesManager.DeclareCurrentMinigameWon();
-                    Debug.Log("You Win!");
                     won = true;
                     
                     timerIsRunning = false;
@@ -66,7 +64,6 @@ namespace RedRagers
                     music.Stop();
                     loseSound.Play();
                     Managers.MinigamesManager.DeclareCurrentMinigameLost();
-                    Debug.Log("You Lost =(");
                     timeRemaining = 0f;
                     timerIsRunning = false;
                     transform.localScale = new Vector3(timeRemaining, 0, 0);
