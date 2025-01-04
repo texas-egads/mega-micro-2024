@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     public GameObject pivotObject;
     public TimeBarScript timeBar;
+    private bool animationCheck = true;
 
     // Update is called once per frame
     void Update()
@@ -35,10 +36,13 @@ public class Player : MonoBehaviour
             transform.position = newPos;
             transform.rotation = Quaternion.Euler(0f, 0f, rotationAngle);
         }
-        else {
-            if (!timeBar.won) {
-                transform.position = new Vector3(transform.position.x, transform.position.y - 10 * Time.deltaTime, transform.position.z);
-            }
+        else if (!timeBar.won)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y - 10 * Time.deltaTime, transform.position.z);
+        }
+        else if (animationCheck) {
+            animationCheck = false;
+            animator.Play("win", 0, animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1);
         }
     }
 }

@@ -15,7 +15,10 @@ namespace RedRagers
         public float timeRemaining;
         public bool timerIsRunning = false;
         public bool won = false;
+        private bool animationCheck = true;
         public Player player;
+        public Animator splashAnimator;
+        public Animator splashAnimator2;
         [HideInInspector] public AudioSource music;
         [HideInInspector] public AudioSource loseSound;
         public AudioClip musicClip;
@@ -42,7 +45,7 @@ namespace RedRagers
         {
             if (timerIsRunning)
             {
-                
+                UnityEngine.Debug.Log(timeRemaining);
                 if (timeRemaining > 0f)
                 {
                     timeRemaining -= Time.deltaTime;
@@ -68,6 +71,28 @@ namespace RedRagers
                     timerIsRunning = false;
                     transform.localScale = new Vector3(timeRemaining, 0, 0);
                     Managers.MinigamesManager.EndCurrentMinigame(1f);
+                    if (player.value == 0.0) {
+                        if (animationCheck)
+                        {
+                            splashAnimator.SetBool("splash", true);
+                            animationCheck = false;
+                        }
+                        else
+                        {
+                            splashAnimator.SetBool("splash", false);
+                        }
+                    }
+                    else {
+                        if (animationCheck)
+                        {
+                            splashAnimator2.SetBool("splash", true);
+                            animationCheck = false;
+                        }
+                        else
+                        {
+                            splashAnimator2.SetBool("splash", false);
+                        }
+                    }
                 }
             }
             
