@@ -7,8 +7,6 @@ using TMPro;
 
 namespace RedRagers
 {
-    
-
     public class TimeBarScript : MonoBehaviour
     {
         public float startTime = 6.0f;
