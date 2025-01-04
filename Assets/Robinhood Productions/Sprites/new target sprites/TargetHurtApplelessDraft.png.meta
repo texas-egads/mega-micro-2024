@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TargetHurtApplelessDraft_0: 7963884627871385874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

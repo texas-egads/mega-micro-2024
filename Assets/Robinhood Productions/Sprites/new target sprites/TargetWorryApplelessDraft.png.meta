@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TargetWorryApplelessDraft_0: -5863365593052194806
+      TargetWorryApplelessDraft_1: 3464049969618172976
+      TargetWorryApplelessDraft_2: -3939932396551181515
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

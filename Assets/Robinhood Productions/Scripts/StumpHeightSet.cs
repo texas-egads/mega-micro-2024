@@ -26,7 +26,7 @@ public class StumpHeightSet : MonoBehaviour
                 break;
             case 2: // if the stump is tall, give it the tall stump sprite, and raise the specified objects up by 3 units.
                 spriteRenderer.sprite = tallStump;
-                raiseAmount = 2.5f;
+                raiseAmount = 2.3f;
                 break;
             default:
                 break;

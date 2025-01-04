@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ArcherBeltDraft_0: 8020776886572395530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
