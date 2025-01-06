@@ -13,6 +13,7 @@ namespace RobinHoodProductions_1
         public bool contact;
         float defusingTime, penaltyTime;
         BoxCollider2D boxCollider2D;
+        bool gameOver = false;
 
         public List<GameObject> ActiveWires = new List<GameObject>();
         GameObject currentWire;
@@ -55,13 +56,14 @@ namespace RobinHoodProductions_1
                     cut.PlayOneShot(cutWire);
 
                 }
-                else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S))
+                else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)) && !gameOver)
                 {
                     penaltyTime = 0.5f;
                     animator.SetBool("Lose", true);
                     anim.SetBool("Exploded", true);
                     AudioSource lose = Managers.AudioManager.CreateAudioSource();
                     lose.PlayOneShot(loseSound);
+                    gameOver = true;
                     Managers.MinigamesManager.DeclareCurrentMinigameLost();
                     Managers.MinigamesManager.EndCurrentMinigame(1f);
                 }
