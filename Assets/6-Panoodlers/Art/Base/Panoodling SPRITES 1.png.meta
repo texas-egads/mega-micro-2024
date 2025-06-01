@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: 3ab6e2fe8779570499b3cf55cb7f5107
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7450256932705698679
+    second: Panoodling SPRITES 1_0
+  - first:
+      213: 3600906356899334357
+    second: Panoodling SPRITES 1_1
+  - first:
+      213: -2146838877521683963
+    second: Panoodling SPRITES 1_2
+  - first:
+      213: -516497383181463462
+    second: Panoodling SPRITES 1_3
+  - first:
+      213: -3487726837439962200
+    second: Panoodling SPRITES 1_4
+  - first:
+      213: 2647566880840417802
+    second: Panoodling SPRITES 1_5
+  - first:
+      213: -5628479325220644319
+    second: Panoodling SPRITES 1_6
+  - first:
+      213: 9217616147202907845
+    second: Panoodling SPRITES 1_7
+  - first:
+      213: -4290067554636207981
+    second: Panoodling SPRITES 1_8
+  - first:
+      213: -260681008971836724
+    second: Panoodling SPRITES 1_9
+  - first:
+      213: 7280195803050021512
+    second: Panoodling SPRITES 1_10
+  - first:
+      213: 4594712394414992993
+    second: Panoodling SPRITES 1_11
+  - first:
+      213: 6992989899417398960
+    second: Panoodling SPRITES 1_12
+  - first:
+      213: -3057989649556560158
+    second: Panoodling SPRITES 1_13
+  - first:
+      213: 8735471186479621260
+    second: Panoodling SPRITES 1_14
+  - first:
+      213: 1321980041330584619
+    second: Panoodling SPRITES 1_15
+  - first:
+      213: -24137263099067032
+    second: Panoodling SPRITES 1_16
+  - first:
+      213: 3638707083847339420
+    second: Panoodling SPRITES 1_17
+  - first:
+      213: -3808983548484316449
+    second: Panoodling SPRITES 1_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Panoodling SPRITES 1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 185
+        width: 348
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77380570531a46760800000000000000
+      internalID: 7450256932705698679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 1_9
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 177
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc21b84e000e16cf0800000000000000
+      internalID: -260681008971836724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 1_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 16
+        width: 147
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8821610c283780560800000000000000
+      internalID: 7280195803050021512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 1_11
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 17
+        width: 65
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ea0323492b3cf30800000000000000
+      internalID: 4594712394414992993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 1_12
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 37
+        width: 29
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be2ba853471c0160800000000000000
+      internalID: 6992989899417398960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 1_13
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 36
+        width: 107
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e62c5b9d96df85d0800000000000000
+      internalID: -3057989649556560158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 1_14
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 6
+        width: 106
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8427c7f2c0aa3970800000000000000
+      internalID: 8735471186479621260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 94ad26d0ba56fac4f8755335a07adb03
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Panoodling SPRITES 1_0: 7450256932705698679
+      Panoodling SPRITES 1_10: 7280195803050021512
+      Panoodling SPRITES 1_11: 4594712394414992993
+      Panoodling SPRITES 1_12: 6992989899417398960
+      Panoodling SPRITES 1_13: -3057989649556560158
+      Panoodling SPRITES 1_14: 8735471186479621260
+      Panoodling SPRITES 1_9: -260681008971836724
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
