@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b6289b71b71e942a2499ed4eb71c02, type: 3}
+  m_Name: New Minigame Definition
+  m_EditorClassIdentifier: 
+  sceneName: 2-Return0
+  minigameType: 0
+  gameTime: 6857
+  instruction: Climb!
+  title: PandaClimber
+  creditsText: "Lead Designer & Programmer\n<link=https://www.linkedin.com/in/riccardo-scaletti-ex//><color=#ff584d><u>Riccardo
+    Scaletti</u></color></link>\n\nProgrammer:\n<link=https://www.linkedin.com/in/franco-j-ramos//><color=#8888ff><u>Franco
+    Ramos</u></color></link>\n\nLead 2D Artist:\n<link=https://www.instagram.com/pixodraw/><color=#8888ff><u>Nicol\xF2
+    Amelio</u></color></link>\n\nEnvironment Artist:\n<link=https://www.linkedin.com/in/leonardoassom/><color=#8888ff><u>Leonardo
+    Assom</u></color></link>\n\nComposer:\n<link=https://www.linkedin.com/in/daphne-gonz%C3%A1lez-490019320/><color=#8888ff><u>Daph
+    A. Gonz\xE1lez</u></color></link>\n"
+  minigameScreenshot: {fileID: -8896702447141653487, guid: bc3194eaa383fcf4b8ee0df919ca3ed7,
+    type: 3}
