@@ -19,7 +19,7 @@ public class ScenesManager : MonoBehaviour
         Scene startingScene = SceneManager.GetActiveScene();
         
         if (startingScene.name == mainSceneName) {
-            // TODO maybe do something here        
+            // TODO maybe do something here
             return;
         }
 
@@ -72,6 +72,7 @@ public class ScenesManager : MonoBehaviour
     }
 
     private IEnumerator DoLoadMinigame(string sceneName) {
+        Debug.Log("Test Something");
         canActivateMinigame = false;
         currentMinigameLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         currentMinigameLoad.allowSceneActivation = false;
