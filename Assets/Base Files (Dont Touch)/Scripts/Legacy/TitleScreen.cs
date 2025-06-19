@@ -5,17 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreen : MonoBehaviour
 {
+    
     // TODO create a new title screen
+    public string sceneName;
 
-    /*
+    
     public void StartGame()
     {
-        GameManager.Instance.LoadScene("TestMain");
+        //GameManager.instance.LoadScene("TestMain");
+        SceneManager.LoadScene(sceneName);
     }
 
     public void QuitGame()
     {
         Application.Quit();
     }
-    */
+    
 }

@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 7bc368601c177bb418c08a8c633cd00b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2658709422275161930
+    second: Panoodling SPRITES 2_0
+  - first:
+      213: -6694515624578832136
+    second: Panoodling SPRITES 2_1
+  - first:
+      213: 7747644207921967795
+    second: Panoodling SPRITES 2_2
+  - first:
+      213: -592122904078995116
+    second: Panoodling SPRITES 2_3
+  - first:
+      213: 7305280287905890424
+    second: Panoodling SPRITES 2_4
+  - first:
+      213: 8608704313452032090
+    second: Panoodling SPRITES 2_5
+  - first:
+      213: -3534277812679404939
+    second: Panoodling SPRITES 2_6
+  - first:
+      213: -4865847249635487741
+    second: Panoodling SPRITES 2_7
+  - first:
+      213: -5851337234760731037
+    second: Panoodling SPRITES 2_8
+  - first:
+      213: 951210623408272067
+    second: Panoodling SPRITES 2_9
+  - first:
+      213: 2440043005331641071
+    second: Panoodling SPRITES 2_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Panoodling SPRITES 2_0
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 136
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b01e4ceddd5a1bd0800000000000000
+      internalID: -2658709422275161930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 2_1
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 131
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f82dad228d4813a0800000000000000
+      internalID: -6694515624578832136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 2_2
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 139
+        width: 47
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b23d4bbb59258b60800000000000000
+      internalID: 7747644207921967795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 2_3
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 6
+        width: 42
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451bffe1b5b58c7f0800000000000000
+      internalID: -592122904078995116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 2_4
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 6
+        width: 42
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8704b4187b1916560800000000000000
+      internalID: 7305280287905890424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 2_5
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 96
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a507ea356f2487770800000000000000
+      internalID: 8608704313452032090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 2_6
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 92
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.48547754, y: 0.6403928}
+      border: {x: 0, y: 1, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57213b50e09b3fec0800000000000000
+      internalID: -3534277812679404939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 2_7
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 96
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3005a22f4b9097cb0800000000000000
+      internalID: -4865847249635487741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 2_8
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 52
+        width: 48
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 366f11569cfdbcea0800000000000000
+      internalID: -5851337234760731037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 2_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 49
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c2f3d2b501633d00800000000000000
+      internalID: 951210623408272067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panoodling SPRITES 2_10
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 62
+        width: 45
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe218797f26ccd120800000000000000
+      internalID: 2440043005331641071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3fe9e14907f4ed44abfbb44d60ed5654
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Panoodling SPRITES 2_0: -2658709422275161930
+      Panoodling SPRITES 2_1: -6694515624578832136
+      Panoodling SPRITES 2_10: 2440043005331641071
+      Panoodling SPRITES 2_2: 7747644207921967795
+      Panoodling SPRITES 2_3: -592122904078995116
+      Panoodling SPRITES 2_4: 7305280287905890424
+      Panoodling SPRITES 2_5: 8608704313452032090
+      Panoodling SPRITES 2_6: -3534277812679404939
+      Panoodling SPRITES 2_7: -4865847249635487741
+      Panoodling SPRITES 2_8: -5851337234760731037
+      Panoodling SPRITES 2_9: 951210623408272067
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

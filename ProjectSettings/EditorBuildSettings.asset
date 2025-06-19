@@ -17,13 +17,23 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Base Files (Dont Touch)/Scenes/End.unity
     guid: 9afc0269d88532c4e882e8aef915747d
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/0-MyTeam (Example - Dont Touch)/0-Scene.unity
     guid: d9ff06deefccc284d841371feb3b8c3c
+  - enabled: 1
+    path: Assets/4-RedRagers/4-RedRagers.unity
+    guid: 7cf8bb84f30634d979f5026e737707a0
+  - enabled: 1
+    path: Assets/6-Panoodlers/6-Panoodlers.unity
+    guid: 752f9a1f697e08740a1da75f6d9a525d
+  - enabled: 1
+    path: Assets/Robinhood Productions/8-Robinhood productions.unity
+    guid: 453159ade0d451041b36c330bcaa0776
+  - enabled: 1
+    path: Assets/2-Return0/2-Return0.unity
+    guid: cb4685082c9e71641836ad388902b126
+  - enabled: 1
+    path: Assets/2-Return0-1/2-Return0-1.unity
+    guid: 6a871391f820f4f4d957db89573404c6
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
