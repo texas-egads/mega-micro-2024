@@ -13,6 +13,10 @@ public class MainScene : MonoBehaviour
     public TextMeshProUGUI promptText;
     public InstructionText instructionText;
     public Image background;
+    public Animator[] lifeAnims;
+    public Animator pandaAnim;
+    public Animator playerAnim;
+    public Animator gameStartAnim;
 
     private Color normalBG;
     [SerializeField] private Color loseBG;
@@ -23,6 +27,8 @@ public class MainScene : MonoBehaviour
 
     private String baseStatusText;
     private float lastPressTime = 0;
+
+    private int prevLives = 3;
 
     private void Awake() {
         normalBG = background.color;
@@ -114,13 +120,29 @@ public class MainScene : MonoBehaviour
 
         SetStatusText();
 
+        // update old lives
+        for (int i = prevLives; i < 3; i++)
+        {
+            lifeAnims[i].Play("lifeFullAppear");
+        }
+        // update new change in lives
+        if (prevLives != status.currentHealth)
+        {
+            prevLives = status.currentHealth;
+            lifeAnims[status.currentHealth].Play("lifeAppear");
+        }
+
+        // play character anims
+        playerAnim.Play(status.previousMinigameResult == WinLose.WIN ? "playerWin" : status.previousMinigameResult == WinLose.LOSE ? "playerLose" : "N/A");
+        pandaAnim.Play(status.previousMinigameResult == WinLose.WIN ? "pandaSad" : status.previousMinigameResult == WinLose.LOSE ? "pandaLaugh" : "N/A");
+
         // flash a color if the game was won/lost
-        if (status.previousMinigameResult == WinLose.WIN) {
+        /*if (status.previousMinigameResult == WinLose.WIN) {
             background.color = winBG;
         }
         if (status.previousMinigameResult == WinLose.LOSE) {
             background.color = loseBG;
-        }
+        }*/
 
         if (status.nextMinigame != null) {
             // prepare for the next minigame
@@ -137,8 +159,9 @@ public class MainScene : MonoBehaviour
 
     private void OnProceed(MinigameStatus status, Action intermissionFinishedCallback) {
         // start the sequence for the next minigame
+        gameStartAnim.Play("gameStart");
         instructionText.ShowImpactText(status.nextMinigame.instruction);
-        DOVirtual.DelayedCall(0.5f, () => intermissionFinishedCallback?.Invoke(), false);
+        DOVirtual.DelayedCall(1f, () => intermissionFinishedCallback?.Invoke(), false);
     }
 
 
