@@ -18,6 +18,10 @@ public class TitleScreen : MonoBehaviour
 
     public void QuitGame()
     {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Debug.Log("Game is over (once the game is built)");
         Application.Quit();
     }
     

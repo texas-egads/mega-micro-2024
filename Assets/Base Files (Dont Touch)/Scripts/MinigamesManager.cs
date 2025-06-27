@@ -202,6 +202,7 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
         else if (status.currentHealth <= 0) {
             status.gameResult = WinLose.LOSE;
             status.nextMinigame = null;
+            SceneManager.LoadScene("GameOver");
         }
         else {
             // game still running, proceed with next round
