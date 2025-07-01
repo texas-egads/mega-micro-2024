@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 using static IMinigamesManager;
 
 public class MinigamesManager : MonoBehaviour, IMinigamesManager
@@ -202,7 +203,11 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
         else if (status.currentHealth <= 0) {
             status.gameResult = WinLose.LOSE;
             status.nextMinigame = null;
-            SceneManager.LoadScene("GameOver");
+
+            // game over transition
+            DOVirtual.DelayedCall(2.5f, () => {
+                SceneManager.LoadScene("GameOver");
+            }, false);
         }
         else {
             // game still running, proceed with next round

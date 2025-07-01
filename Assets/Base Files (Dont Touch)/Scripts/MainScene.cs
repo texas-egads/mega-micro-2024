@@ -133,8 +133,15 @@ public class MainScene : MonoBehaviour
         }
 
         // play character anims
-        playerAnim.Play(status.previousMinigameResult == WinLose.WIN ? "playerWin" : status.previousMinigameResult == WinLose.LOSE ? "playerLose" : "N/A");
-        pandaAnim.Play(status.previousMinigameResult == WinLose.WIN ? "pandaSad" : status.previousMinigameResult == WinLose.LOSE ? "pandaLaugh" : "N/A");
+        if(status.previousMinigameResult == WinLose.WIN)
+        {
+            playerAnim.Play("playerWin");
+            pandaAnim.Play("pandaSad");
+        } else if (status.previousMinigameResult == WinLose.LOSE)
+        {
+            playerAnim.Play("playerLose");
+            pandaAnim.Play("pandaLaugh");
+        }
 
         // flash a color if the game was won/lost
         /*if (status.previousMinigameResult == WinLose.WIN) {
