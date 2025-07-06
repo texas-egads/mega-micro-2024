@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Base Files (Dont Touch)/Scenes/GameOver.unity
     guid: e2f9c395dc736b84a96b2a15ad77296b
   - enabled: 1
-    path: Assets/Base Files (Dont Touch)/Scenes/BossScene.unity
+    path: Assets/Boss/BossScene.unity
     guid: 9170a2b67ae9fc147ab5b12862d55f12
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
