@@ -1,0 +1,820 @@
+fileFormatVersion: 2
+guid: d732311facdb58b4aab8ef843cf86542
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 881680301135438530
+    second: redPandaLoseSpritesheet_5x5_0
+  - first:
+      213: 4859994461758895012
+    second: redPandaLoseSpritesheet_5x5_1
+  - first:
+      213: -6611492932007952233
+    second: redPandaLoseSpritesheet_5x5_2
+  - first:
+      213: -1554044958539766794
+    second: redPandaLoseSpritesheet_5x5_3
+  - first:
+      213: 475202350981268573
+    second: redPandaLoseSpritesheet_5x5_4
+  - first:
+      213: -5444492779553175398
+    second: redPandaLoseSpritesheet_5x5_5
+  - first:
+      213: -1915850763784093399
+    second: redPandaLoseSpritesheet_5x5_6
+  - first:
+      213: 7089158106909176008
+    second: redPandaLoseSpritesheet_5x5_7
+  - first:
+      213: -4815725678469444028
+    second: redPandaLoseSpritesheet_5x5_8
+  - first:
+      213: -3406368300789857168
+    second: redPandaLoseSpritesheet_5x5_9
+  - first:
+      213: 1215528785922224129
+    second: redPandaLoseSpritesheet_5x5_10
+  - first:
+      213: -3795766173950765010
+    second: redPandaLoseSpritesheet_5x5_11
+  - first:
+      213: -3791502148142496628
+    second: redPandaLoseSpritesheet_5x5_12
+  - first:
+      213: 4925831337684776773
+    second: redPandaLoseSpritesheet_5x5_13
+  - first:
+      213: -8810574470917953039
+    second: redPandaLoseSpritesheet_5x5_14
+  - first:
+      213: 1212883334307698880
+    second: redPandaLoseSpritesheet_5x5_15
+  - first:
+      213: -8974770736061060289
+    second: redPandaLoseSpritesheet_5x5_16
+  - first:
+      213: 6257895101165326767
+    second: redPandaLoseSpritesheet_5x5_17
+  - first:
+      213: 695203900740343646
+    second: redPandaLoseSpritesheet_5x5_18
+  - first:
+      213: 8798179255181477499
+    second: redPandaLoseSpritesheet_5x5_19
+  - first:
+      213: -198782671230943608
+    second: redPandaLoseSpritesheet_5x5_20
+  - first:
+      213: -8553718970076988632
+    second: redPandaLoseSpritesheet_5x5_21
+  - first:
+      213: -6231629094271758161
+    second: redPandaLoseSpritesheet_5x5_22
+  - first:
+      213: -5946777709669672240
+    second: redPandaLoseSpritesheet_5x5_23
+  - first:
+      213: 7429765526909758629
+    second: redPandaLoseSpritesheet_5x5_24
+  - first:
+      213: -2510735414591256039
+    second: redPandaLoseSpritesheet_5x5_25
+  - first:
+      213: -3068885536587459056
+    second: redPandaLoseSpritesheet_5x5_26
+  - first:
+      213: 8972899590455012384
+    second: redPandaLoseSpritesheet_5x5_27
+  - first:
+      213: 4984186210931328584
+    second: redPandaLoseSpritesheet_5x5_28
+  - first:
+      213: 8074832853768801201
+    second: redPandaLoseSpritesheet_5x5_29
+  - first:
+      213: -6121385738331915675
+    second: redPandaLoseSpritesheet_5x5_30
+  - first:
+      213: -4397585564346767388
+    second: redPandaLoseSpritesheet_5x5_31
+  - first:
+      213: -7061231579252565376
+    second: redPandaLoseSpritesheet_5x5_32
+  - first:
+      213: -1934026890088579519
+    second: redPandaLoseSpritesheet_5x5_33
+  - first:
+      213: 4144435739666530244
+    second: redPandaLoseSpritesheet_5x5_34
+  - first:
+      213: 7155555106449487885
+    second: redPandaLoseSpritesheet_5x5_35
+  - first:
+      213: -9051900016729792869
+    second: redPandaLoseSpritesheet_5x5_36
+  - first:
+      213: -5050432282689461564
+    second: redPandaLoseSpritesheet_5x5_37
+  - first:
+      213: -7652315252013267458
+    second: redPandaLoseSpritesheet_5x5_38
+  - first:
+      213: 3629918233073181811
+    second: redPandaLoseSpritesheet_5x5_39
+  - first:
+      213: 1617723506087272564
+    second: redPandaLoseSpritesheet_5x5_40
+  - first:
+      213: -7024329844394641223
+    second: redPandaLoseSpritesheet_5x5_41
+  - first:
+      213: -462237836336175207
+    second: redPandaLoseSpritesheet_5x5_42
+  - first:
+      213: -3653966264834445175
+    second: redPandaLoseSpritesheet_5x5_43
+  - first:
+      213: -5058032879499601234
+    second: redPandaLoseSpritesheet_5x5_44
+  - first:
+      213: -1085401538678138728
+    second: redPandaLoseSpritesheet_5x5_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621644231f73fbe4ba23b42ded5c6500
+      internalID: 1508041350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 3000
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afbf35985450b964683e102ca8e84511
+      internalID: 188182819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3000
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0643bafdfff672d4e97546023656e3d6
+      internalID: 1209717706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3000
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba96e599c48aa2e419f7176103709f43
+      internalID: 1207168302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 3000
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30e22c3eaadd5e4384e26255b4c0d4b
+      internalID: 1322785693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2250
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb44df4e41c5d449bfc85ba8f320833
+      internalID: -462810755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_6
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2250
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94d0c5a876d9ac4aa95e6f323a5ee7d
+      internalID: -151110566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_7
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2250
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee51f50e2b8c894ba05c5a401fadc92
+      internalID: 524080660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_8
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2250
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571fc8070ed19a1479364220484ef43a
+      internalID: 45266502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_9
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2250
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d5359827b90bb47b80076958c480fa
+      internalID: -2066217119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec041c305b368942b93ff1ac12b2ae1
+      internalID: -526091119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_11
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1500
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ba3e4a4eba16a45bd8ff9cfd0fe98d
+      internalID: 440108259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_12
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1500
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d336c00290863e944aa2f9269e275127
+      internalID: 1442825869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_13
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1500
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6678ebce34c4e41ae4be7d9205c5e0
+      internalID: 1219453756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_14
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1500
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700a2d0fd7f9270489b776559632933a
+      internalID: 664146199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7103258f69a90a247b426dab4ba59c6b
+      internalID: 2066057442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_16
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 750
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77cdd65b8910cf40b841a7461cb058d
+      internalID: 387970759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_17
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 750
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2d10d44dc70994d8f8c1c5178fa701
+      internalID: 613486089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_18
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 750
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4114f991a08b94d8f533a063d13f33
+      internalID: -2063151420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_19
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 750
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36a65e78a8044c4bb9a8e23a4e5d00f
+      internalID: -178649126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96169a180850967438049362cf446ce2
+      internalID: -1791638314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_21
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e778e53b6d07b4ca67cdaf1cd85e63
+      internalID: -1970755233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_22
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c9a76afad04164a8c0554fe247ba10
+      internalID: -2107511663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaLoseSpritesheet_5x5_23
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151a5413c86ba0e4ba48329ce721d07f
+      internalID: -706083584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a97d660316807cf4b80f44b271ec7558
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      redPandaLoseSpritesheet_5x5_0: 1508041350
+      redPandaLoseSpritesheet_5x5_1: 188182819
+      redPandaLoseSpritesheet_5x5_10: -526091119
+      redPandaLoseSpritesheet_5x5_11: 440108259
+      redPandaLoseSpritesheet_5x5_12: 1442825869
+      redPandaLoseSpritesheet_5x5_13: 1219453756
+      redPandaLoseSpritesheet_5x5_14: 664146199
+      redPandaLoseSpritesheet_5x5_15: 2066057442
+      redPandaLoseSpritesheet_5x5_16: 387970759
+      redPandaLoseSpritesheet_5x5_17: 613486089
+      redPandaLoseSpritesheet_5x5_18: -2063151420
+      redPandaLoseSpritesheet_5x5_19: -178649126
+      redPandaLoseSpritesheet_5x5_2: 1209717706
+      redPandaLoseSpritesheet_5x5_20: -1791638314
+      redPandaLoseSpritesheet_5x5_21: -1970755233
+      redPandaLoseSpritesheet_5x5_22: -2107511663
+      redPandaLoseSpritesheet_5x5_23: -706083584
+      redPandaLoseSpritesheet_5x5_3: 1207168302
+      redPandaLoseSpritesheet_5x5_4: 1322785693
+      redPandaLoseSpritesheet_5x5_5: -462810755
+      redPandaLoseSpritesheet_5x5_6: -151110566
+      redPandaLoseSpritesheet_5x5_7: 524080660
+      redPandaLoseSpritesheet_5x5_8: 45266502
+      redPandaLoseSpritesheet_5x5_9: -2066217119
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

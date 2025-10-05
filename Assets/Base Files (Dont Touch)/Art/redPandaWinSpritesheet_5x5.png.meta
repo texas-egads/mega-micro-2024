@@ -1,0 +1,829 @@
+fileFormatVersion: 2
+guid: 5be8866ecce18ec458a43bbc80f30944
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7398554180314322758
+    second: redPandaWinSpritesheet_5x5_0
+  - first:
+      213: 1067799122698934780
+    second: redPandaWinSpritesheet_5x5_1
+  - first:
+      213: -4020094270068970803
+    second: redPandaWinSpritesheet_5x5_2
+  - first:
+      213: 6663799119616454129
+    second: redPandaWinSpritesheet_5x5_3
+  - first:
+      213: 8524260412706861604
+    second: redPandaWinSpritesheet_5x5_4
+  - first:
+      213: 6340790291034940242
+    second: redPandaWinSpritesheet_5x5_5
+  - first:
+      213: 7925232587644575824
+    second: redPandaWinSpritesheet_5x5_6
+  - first:
+      213: -4009754593422137925
+    second: redPandaWinSpritesheet_5x5_7
+  - first:
+      213: -272175687945252323
+    second: redPandaWinSpritesheet_5x5_8
+  - first:
+      213: -4625237676312447
+    second: redPandaWinSpritesheet_5x5_9
+  - first:
+      213: -7687182835427880864
+    second: redPandaWinSpritesheet_5x5_10
+  - first:
+      213: 4989852351071588991
+    second: redPandaWinSpritesheet_5x5_11
+  - first:
+      213: -5527406775804727341
+    second: redPandaWinSpritesheet_5x5_12
+  - first:
+      213: -4314637068837409718
+    second: redPandaWinSpritesheet_5x5_13
+  - first:
+      213: 2513629356755897514
+    second: redPandaWinSpritesheet_5x5_14
+  - first:
+      213: -2932096785298008076
+    second: redPandaWinSpritesheet_5x5_15
+  - first:
+      213: -3721727607735744315
+    second: redPandaWinSpritesheet_5x5_16
+  - first:
+      213: 5892871918274561241
+    second: redPandaWinSpritesheet_5x5_17
+  - first:
+      213: -705279475365867163
+    second: redPandaWinSpritesheet_5x5_18
+  - first:
+      213: 4452524166487085155
+    second: redPandaWinSpritesheet_5x5_19
+  - first:
+      213: -6426123449190264974
+    second: redPandaWinSpritesheet_5x5_20
+  - first:
+      213: 899032122762481733
+    second: redPandaWinSpritesheet_5x5_21
+  - first:
+      213: 4939609861588404524
+    second: redPandaWinSpritesheet_5x5_22
+  - first:
+      213: 6465237338319747066
+    second: redPandaWinSpritesheet_5x5_23
+  - first:
+      213: -9009191252768039178
+    second: redPandaWinSpritesheet_5x5_24
+  - first:
+      213: 5667182341654129413
+    second: redPandaWinSpritesheet_5x5_25
+  - first:
+      213: -6046670379714124179
+    second: redPandaWinSpritesheet_5x5_26
+  - first:
+      213: -5199997253104989743
+    second: redPandaWinSpritesheet_5x5_27
+  - first:
+      213: -1229987724098372184
+    second: redPandaWinSpritesheet_5x5_28
+  - first:
+      213: 7491958830497146656
+    second: redPandaWinSpritesheet_5x5_29
+  - first:
+      213: 6840295567418504713
+    second: redPandaWinSpritesheet_5x5_30
+  - first:
+      213: 632947191294787813
+    second: redPandaWinSpritesheet_5x5_31
+  - first:
+      213: -2198141289592887779
+    second: redPandaWinSpritesheet_5x5_32
+  - first:
+      213: 7844900417266152734
+    second: redPandaWinSpritesheet_5x5_33
+  - first:
+      213: -8061178300989074298
+    second: redPandaWinSpritesheet_5x5_34
+  - first:
+      213: 3699487896133978025
+    second: redPandaWinSpritesheet_5x5_35
+  - first:
+      213: -9050080065602865502
+    second: redPandaWinSpritesheet_5x5_36
+  - first:
+      213: -3706523688412752950
+    second: redPandaWinSpritesheet_5x5_37
+  - first:
+      213: -6774409126698616141
+    second: redPandaWinSpritesheet_5x5_38
+  - first:
+      213: 4334671483441866808
+    second: redPandaWinSpritesheet_5x5_39
+  - first:
+      213: -661245207497934615
+    second: redPandaWinSpritesheet_5x5_40
+  - first:
+      213: 915950753926499437
+    second: redPandaWinSpritesheet_5x5_41
+  - first:
+      213: 8704857785673318354
+    second: redPandaWinSpritesheet_5x5_42
+  - first:
+      213: -3210934838181684589
+    second: redPandaWinSpritesheet_5x5_43
+  - first:
+      213: 7207994314712546115
+    second: redPandaWinSpritesheet_5x5_44
+  - first:
+      213: -5590523018097651834
+    second: redPandaWinSpritesheet_5x5_45
+  - first:
+      213: 1332749957837326613
+    second: redPandaWinSpritesheet_5x5_46
+  - first:
+      213: -193436992466577262
+    second: redPandaWinSpritesheet_5x5_47
+  - first:
+      213: -6049344942818135882
+    second: redPandaWinSpritesheet_5x5_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404afb669bcc5a64890c9dd60da5d128
+      internalID: -329451219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 3000
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee8827c8bcd7c0438d42a5fdef7f463
+      internalID: -1116106385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3000
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40bae842a83d094bb796e519bb62aff
+      internalID: 713753139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3000
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b9385793ebfee4787a76d0b763a9a2
+      internalID: 1357681533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 3000
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f9b24d50e36254698e3090544ff915
+      internalID: -1197555455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2250
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458fc9e99ef76cd4ea05afccba6ae0d7
+      internalID: 1061755280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_6
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2250
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e95fe21f10ef6c49881efad243ea2b8
+      internalID: 1502003468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_7
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2250
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c33c7efd26e5f744942c7a1c942f069
+      internalID: -1677505009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_8
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2250
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa21c3dd7375604ebd66c356f20927f
+      internalID: -1343055924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_9
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2250
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c285aace1722a41bd8c2418d91c353
+      internalID: -1185324558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66fbf0790de2d047836710c5d8a6639
+      internalID: 838129821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_11
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1500
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745564dfd2e38da4dbbbb81612487d0f
+      internalID: 711108486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_12
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1500
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580a6505aa6d4f7418c642999c57ce90
+      internalID: 781257951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_13
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1500
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35732bb5f6c03d740a8e539e5015a3c8
+      internalID: 170673277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_14
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1500
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc741373a20a7fb4089b2b799adb7714
+      internalID: -1064835950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6371d3d8e1c6c384d8c6e1a2cba07ffc
+      internalID: 1847118069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_16
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 750
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7225e234b4ffabe4680f9774ee52c894
+      internalID: -1407756912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_17
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 750
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc353aa144bd29047af2bdf362d8e6b9
+      internalID: 495483050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_18
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 750
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c406859d6401594d8fdf9d854a1ec6d
+      internalID: -1123915144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_19
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 750
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ccfd1f0553d144d8d418284b3782aa
+      internalID: -951315005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3530c16d7faf40e4ab8eae055196f42f
+      internalID: -1317368153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_21
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a9cd3c0c83a7e4db8325cb81ea841b
+      internalID: 384710990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_22
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e011fe8f51968f4d84bedc7849c150c
+      internalID: -951536366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redPandaWinSpritesheet_5x5_23
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 1000
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcf6a122d684dd4fa60704e8f668dad
+      internalID: 359983704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4b03d14e6d8e5804a932c1ff8836fcac
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      redPandaWinSpritesheet_5x5_0: -329451219
+      redPandaWinSpritesheet_5x5_1: -1116106385
+      redPandaWinSpritesheet_5x5_10: 838129821
+      redPandaWinSpritesheet_5x5_11: 711108486
+      redPandaWinSpritesheet_5x5_12: 781257951
+      redPandaWinSpritesheet_5x5_13: 170673277
+      redPandaWinSpritesheet_5x5_14: -1064835950
+      redPandaWinSpritesheet_5x5_15: 1847118069
+      redPandaWinSpritesheet_5x5_16: -1407756912
+      redPandaWinSpritesheet_5x5_17: 495483050
+      redPandaWinSpritesheet_5x5_18: -1123915144
+      redPandaWinSpritesheet_5x5_19: -951315005
+      redPandaWinSpritesheet_5x5_2: 713753139
+      redPandaWinSpritesheet_5x5_20: -1317368153
+      redPandaWinSpritesheet_5x5_21: 384710990
+      redPandaWinSpritesheet_5x5_22: -951536366
+      redPandaWinSpritesheet_5x5_23: 359983704
+      redPandaWinSpritesheet_5x5_3: 1357681533
+      redPandaWinSpritesheet_5x5_4: -1197555455
+      redPandaWinSpritesheet_5x5_5: 1061755280
+      redPandaWinSpritesheet_5x5_6: 1502003468
+      redPandaWinSpritesheet_5x5_7: -1677505009
+      redPandaWinSpritesheet_5x5_8: -1343055924
+      redPandaWinSpritesheet_5x5_9: -1185324558
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
