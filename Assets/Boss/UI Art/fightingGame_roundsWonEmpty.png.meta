@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fightingGame_roundsWonEmpty_0: -387423286782155698
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -72,7 +72,6 @@ public class ScenesManager : MonoBehaviour
     }
 
     private IEnumerator DoLoadMinigame(string sceneName) {
-        Debug.Log("Test Something");
         canActivateMinigame = false;
         currentMinigameLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         currentMinigameLoad.allowSceneActivation = false;

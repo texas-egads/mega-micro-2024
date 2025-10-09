@@ -14,7 +14,6 @@ public class MainScene : MonoBehaviour
     public InstructionText instructionText;
     public Image background;
     public Animator[] lifeAnims;
-    public Animator pandaAnim;
     public Animator playerAnim;
     public Animator gameStartAnim;
 
@@ -136,11 +135,9 @@ public class MainScene : MonoBehaviour
         if(status.previousMinigameResult == WinLose.WIN)
         {
             playerAnim.Play("playerWin");
-            pandaAnim.Play("pandaSad");
         } else if (status.previousMinigameResult == WinLose.LOSE)
         {
             playerAnim.Play("playerLose");
-            pandaAnim.Play("pandaLaugh");
         }
 
         // flash a color if the game was won/lost

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fightingGame_healthBarUnder_0: -1705885342065104340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

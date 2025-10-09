@@ -35,6 +35,12 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
 
     public void Initialize() {
         minigames = new List<MinigameDefinition>();
+        minigameDifficulty = PlayerPrefs.GetInt("difficulty", 0) switch
+        {
+            int i when i == 0 => Difficulty.EASY,
+            int i when i == 1 => Difficulty.MEDIUM,
+            _ => Difficulty.HARD
+        };
         isMinigamePlaying = false;
         isCurrentMinigameWon = false;
     }
@@ -64,11 +70,13 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
 
         // check that we have enough normal minigames to cover the number of rounds
         if (normalMinigames.Count < numberOfRounds) {
-            Debug.LogWarning($"There are only {normalMinigames.Count} normal minigames, which isn't enough to fill {numberOfRounds} rounds. This is fine for testing but it shouldn't happen when all of the minigames are assembled.");
+            //Debug.LogWarning($"There are only {normalMinigames.Count} normal minigames, which isn't enough to fill {numberOfRounds} rounds. This is fine for testing but it shouldn't happen when all of the minigames are assembled.");
         
             int numNormalMinigames = normalMinigames.Count;
+            int iOffset = 0;
             for (int i = numNormalMinigames; i < numberOfRounds; i++) {
-                normalMinigames.Add(normalMinigames[i % numNormalMinigames]);
+                normalMinigames.Add(normalMinigames[(i + iOffset) % numNormalMinigames]);
+                iOffset += UnityEngine.Random.Range(0, numNormalMinigames);
             }
         }
 

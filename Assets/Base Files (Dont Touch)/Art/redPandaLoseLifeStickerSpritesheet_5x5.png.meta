@@ -137,10 +137,10 @@ TextureImporter:
       name: redPandaLoseLifeStickerSpritesheet_5x5_0
       rect:
         serializedVersion: 2
-        x: 329
-        y: 3420
-        width: 79
-        height: 55
+        x: 0
+        y: 3000
+        width: 1000
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +159,10 @@ TextureImporter:
       name: redPandaLoseLifeStickerSpritesheet_5x5_1
       rect:
         serializedVersion: 2
-        x: 1329
-        y: 3420
-        width: 79
-        height: 55
+        x: 1000
+        y: 3000
+        width: 1000
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: redPandaLoseLifeStickerSpritesheet_5x5_2
       rect:
         serializedVersion: 2
-        x: 2329
-        y: 3420
-        width: 79
-        height: 55
+        x: 2000
+        y: 3000
+        width: 1000
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: redPandaLoseLifeStickerSpritesheet_5x5_3
       rect:
         serializedVersion: 2
-        x: 3329
-        y: 3420
-        width: 79
-        height: 55
+        x: 3000
+        y: 3000
+        width: 1000
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: redPandaLoseLifeStickerSpritesheet_5x5_4
       rect:
         serializedVersion: 2
-        x: 4329
-        y: 3450
-        width: 74
-        height: 41
+        x: 4000
+        y: 3000
+        width: 1000
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: redPandaLoseLifeStickerSpritesheet_5x5_5
       rect:
         serializedVersion: 2
-        x: 1160
-        y: 2915
-        width: 95
-        height: 25
+        x: 0
+        y: 2250
+        width: 1000
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,10 +269,10 @@ TextureImporter:
       name: redPandaLoseLifeStickerSpritesheet_5x5_6
       rect:
         serializedVersion: 2
-        x: 2005
-        y: 2876
-        width: 60
-        height: 38
+        x: 1000
+        y: 2250
+        width: 1000
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,10 +291,10 @@ TextureImporter:
       name: redPandaLoseLifeStickerSpritesheet_5x5_7
       rect:
         serializedVersion: 2
-        x: 324
-        y: 2765
-        width: 56
-        height: 81
+        x: 2000
+        y: 2250
+        width: 1000
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
