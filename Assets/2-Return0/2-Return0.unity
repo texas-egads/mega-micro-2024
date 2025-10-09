@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d40d856e7b5f040bb68d22cbc17fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 910153097}
   UITextWin: {fileID: 239751992}
   startText: Climb!
   winText: You Won!
@@ -1401,6 +1402,12 @@ PrefabInstance:
       addedObject: {fileID: 239751991}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4aea32018d6ab04ab56ce99e495f1b2, type: 3}
+--- !u!4 &910153097 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4878292530257881790, guid: d4aea32018d6ab04ab56ce99e495f1b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 910153096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &960933800
 GameObject:
   m_ObjectHideFlags: 0

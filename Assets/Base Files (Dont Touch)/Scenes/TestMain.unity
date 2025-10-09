@@ -427,6 +427,9 @@ MonoBehaviour:
   promptText: {fileID: 2018092938}
   instructionText: {fileID: 1524467973}
   background: {fileID: 1298500458}
+  lifeAnims: []
+  playerAnim: {fileID: 0}
+  gameStartAnim: {fileID: 0}
   loseBG: {r: 1, g: 0.4481132, b: 0.4481132, a: 1}
   winBG: {r: 0.514151, g: 1, b: 0.54340076, a: 1}
 --- !u!95 &286624172
@@ -776,20 +779,30 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 21403712310278605, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}
+      propertyPath: numRoundsInEasyMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 21403712310278605, guid: 299268e851095ea429ce927bf2bef866,
+        type: 3}
+      propertyPath: numRoundsInNormalMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 21403712310278605, guid: 299268e851095ea429ce927bf2bef866,
+        type: 3}
       propertyPath: allMinigames.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 21403712310278605, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}
       propertyPath: 'allMinigames.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 08fb96c17603cd54abc4a6539195d719,
+      objectReference: {fileID: 11400000, guid: 396033bc67fd4f449907829eef8bb083,
         type: 2}
     - target: {fileID: 21403712310278605, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}
       propertyPath: 'allMinigames.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: d064c8f702b324fe6a5629beb63c0ce1,
+      objectReference: {fileID: 11400000, guid: 674b3f8fc05df0d49a41d65d87b469b3,
         type: 2}
     - target: {fileID: 21403712310278605, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}

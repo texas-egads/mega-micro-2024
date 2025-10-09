@@ -119,11 +119,6 @@ public class MainScene : MonoBehaviour
 
         SetStatusText();
 
-        // update old lives
-        for (int i = prevLives; i < 3; i++)
-        {
-            lifeAnims[i].Play("lifeFullAppear");
-        }
         // update new change in lives
         if (prevLives != status.currentHealth)
         {
@@ -140,23 +135,10 @@ public class MainScene : MonoBehaviour
             playerAnim.Play("playerLose");
         }
 
-        // flash a color if the game was won/lost
-        /*if (status.previousMinigameResult == WinLose.WIN) {
-            background.color = winBG;
-        }
-        if (status.previousMinigameResult == WinLose.LOSE) {
-            background.color = loseBG;
-        }*/
-
         if (status.nextMinigame != null) {
             // prepare for the next minigame
-            DOVirtual.DelayedCall(1f, () => {
-                // return the background color to what it was before
-                background.color = normalBG;
-
-                // await input
-                promptText.text = "Press SPACE to start next minigame";
-                spacePressedAction = () => OnProceed(status, intermissionFinishedCallback);
+            DOVirtual.DelayedCall(3f, () => {
+                OnProceed(status, intermissionFinishedCallback);
             }, false);
         }
     }

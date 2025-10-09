@@ -6,6 +6,7 @@ namespace Return0
 {
     public class PandaClimber : MonoBehaviour
     {
+        public Transform cam;
         public TextMeshProUGUI UITextWin;
 
         public string startText;
@@ -52,7 +53,6 @@ namespace Return0
 
         void Update()
         {
-
             if (inputsPressed == DifficultyChanger.count) 
             {//winning conditions met
 
@@ -135,15 +135,15 @@ namespace Return0
         public void UpdateCamera()
         {
 
-            if (Camera.main.transform.position.y <= 0) //checking bottom bounds, resets y if below 0.
+            if (cam.transform.position.y <= 0) //checking bottom bounds, resets y if below 0.
             {
-                Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, 0, -9);
+                cam.transform.position = new Vector3(cam.transform.position.x, 0, -9);
             }
-            if (Camera.main.transform.position != transform.position) //if they don't match, move camera towards player
+            if (cam.transform.position != transform.position) //if they don't match, move camera towards player
             {
                 Vector2 offsetPos = new Vector2(transform.position.x, transform.position.y+3.03f);
-                Vector2 newPos = Vector2.Lerp(Camera.main.transform.position, offsetPos, Time.deltaTime+0.005f); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
-                Camera.main.transform.position = new Vector3(newPos.x,newPos.y,-9);
+                Vector2 newPos = Vector2.Lerp(cam.transform.position, offsetPos, Time.deltaTime+0.005f); //lerp needs to be stored first, then used through Vector 3 because we are using a 3D camera.
+                cam.transform.position = new Vector3(newPos.x,newPos.y,-9);
             }
         }
 

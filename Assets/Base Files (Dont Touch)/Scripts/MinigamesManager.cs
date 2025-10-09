@@ -138,6 +138,7 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
         return minigameDifficulty;
     }
 
+    bool manuallyEnding = false;
     public void EndCurrentMinigame(float delay = 0) {
         if (!isMinigamePlaying) {
             Debug.LogWarning("EndCurrentMinigame is called when a minigame is not being played. This might happen if you try to call EndCurrentMinigame right after the minigame ran out of time. This call will be ignored.");
@@ -149,11 +150,13 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
             return;
         }
 
+        manuallyEnding = true;
         minigameEndCoroutine = StartCoroutine(DoEndMinigame(delay));
     }
 
     // used by the timer to end a minigame regardless of whether the minigame has been ended by itself
     public void ForceEndCurrentMinigame() {
+        if (manuallyEnding) return;
         if (!isMinigamePlaying) {
             Debug.LogError("Attempt to call ForceEndCurrentMinigame when a minigame is not being played!");
             return;
@@ -169,6 +172,7 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
         if (delay > 0)
             yield return new WaitForSeconds(delay);
 
+        manuallyEnding = false;
         isMinigamePlaying = false;
         OnEndMinigame?.Invoke();
 
@@ -204,9 +208,14 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
         }
 
         status.currentHealth += status.healthDelta;
-        if (status.nextRoundNumber >= minigames.Count) {
+        if (status.nextRoundNumber >= minigames.Count && status.currentHealth > 0) {
             status.gameResult = WinLose.WIN;
             status.nextMinigame = null;
+
+            // boss fight transition
+            DOVirtual.DelayedCall(2.5f, () => {
+                SceneManager.LoadScene("BossScene");
+            }, false);
         }
         else if (status.currentHealth <= 0) {
             status.gameResult = WinLose.LOSE;
@@ -214,7 +223,7 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
 
             // game over transition
             DOVirtual.DelayedCall(2.5f, () => {
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene("LoseScreen");
             }, false);
         }
         else {

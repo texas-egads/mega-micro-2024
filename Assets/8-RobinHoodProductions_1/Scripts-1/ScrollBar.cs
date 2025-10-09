@@ -48,7 +48,6 @@ namespace RobinHoodProductions_1
                 KeyCode currentWireKey = currentWire.GetComponent<Wire>().keyCode;
                 transform.position = currentWire.transform.position;
 
-
                 if (Input.GetKeyDown(currentWireKey))
                 {
                     defusingTime = 0.1f;

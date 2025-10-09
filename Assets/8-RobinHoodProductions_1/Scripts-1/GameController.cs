@@ -6,6 +6,7 @@ namespace RobinHoodProductions_1
 {
     public class GameController : MonoBehaviour
     {
+        public GameObject[] wires;
         public float radius, delay;
         public Animator animator, anim;
         public AudioClip winSound;
@@ -44,17 +45,13 @@ namespace RobinHoodProductions_1
 
         List<GameObject> WireStatus()
         {
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
             List<GameObject> ActiveWires = new List<GameObject>();
-            foreach (BoxCollider2D collider in colliders)
+            foreach (GameObject wire in wires)
             {
-                if (collider.gameObject.tag == "Object 1")
+                bool active = wire.GetComponent<Wire>().Active;
+                if (active)
                 {
-                    bool active = collider.gameObject.GetComponent<Wire>().Active;
-                    if (active)
-                    {
-                        ActiveWires.Add(collider.gameObject);
-                    }
+                    ActiveWires.Add(wire);
                 }
 
             }

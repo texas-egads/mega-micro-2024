@@ -300,7 +300,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 387849965
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 4396296982613204994, guid: c2b229b12478e49489dd4680872775ea,
     type: 3}
@@ -437,6 +437,16 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2793872988876484464, guid: 698734984f0ccc54eb080ebf367c5200,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793872988876484464, guid: 698734984f0ccc54eb080ebf367c5200,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8817751698482031500, guid: 698734984f0ccc54eb080ebf367c5200,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -492,6 +502,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 698734984f0ccc54eb080ebf367c5200, type: 3}
+--- !u!1 &398192123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2298527184112490329, guid: 698734984f0ccc54eb080ebf367c5200,
+    type: 3}
+  m_PrefabInstance: {fileID: 398192122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &429481807
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +606,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1419705431
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: -980095317097466160, guid: 26431c4b1ef687b4aaf3dc40ed2d0e5e,
     type: 3}
@@ -793,6 +809,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607ffb3c74eb05a41a7aa68fb64a27c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wires:
+  - {fileID: 1458033297}
+  - {fileID: 966385074}
+  - {fileID: 398192123}
+  - {fileID: 662652644}
   radius: 10
   delay: 0.5
   animator: {fileID: 200462068}
@@ -841,6 +862,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793872988876484464, guid: 698734984f0ccc54eb080ebf367c5200,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793872988876484464, guid: 698734984f0ccc54eb080ebf367c5200,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8817751698482031500, guid: 698734984f0ccc54eb080ebf367c5200,
         type: 3}
@@ -897,6 +928,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 698734984f0ccc54eb080ebf367c5200, type: 3}
+--- !u!1 &662652644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2298527184112490329, guid: 698734984f0ccc54eb080ebf367c5200,
+    type: 3}
+  m_PrefabInstance: {fileID: 662652643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &910153096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -988,6 +1025,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wire (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2793872988876484464, guid: 698734984f0ccc54eb080ebf367c5200,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793872988876484464, guid: 698734984f0ccc54eb080ebf367c5200,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8817751698482031500, guid: 698734984f0ccc54eb080ebf367c5200,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1043,6 +1090,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 698734984f0ccc54eb080ebf367c5200, type: 3}
+--- !u!1 &966385074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2298527184112490329, guid: 698734984f0ccc54eb080ebf367c5200,
+    type: 3}
+  m_PrefabInstance: {fileID: 966385073}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1458033296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1055,6 +1108,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wire
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793872988876484464, guid: 698734984f0ccc54eb080ebf367c5200,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793872988876484464, guid: 698734984f0ccc54eb080ebf367c5200,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8817751698482031500, guid: 698734984f0ccc54eb080ebf367c5200,
         type: 3}
@@ -1111,6 +1174,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 698734984f0ccc54eb080ebf367c5200, type: 3}
+--- !u!1 &1458033297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2298527184112490329, guid: 698734984f0ccc54eb080ebf367c5200,
+    type: 3}
+  m_PrefabInstance: {fileID: 1458033296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1961291696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,7 +1310,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -424140957
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
