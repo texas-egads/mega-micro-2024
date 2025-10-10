@@ -53,5 +53,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Screens/WinScreen.unity
     guid: 1047c1fb32b969a47810a657d2e6484a
+  - enabled: 1
+    path: Assets/Base Files (Dont Touch)/Scenes/TestCredits.unity
+    guid: 3a49abe4b551f1d40aaee840fd7c96f0
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

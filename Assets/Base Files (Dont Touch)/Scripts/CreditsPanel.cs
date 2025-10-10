@@ -26,7 +26,7 @@ public class CreditsPanel : MonoBehaviour
 
 #if UNITY_EDITOR
     private void Start() {
-        TestLoadMinigame();
+        //TestLoadMinigame();
     }
 
     [ContextMenu("Load Minigame")]

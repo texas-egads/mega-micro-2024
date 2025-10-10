@@ -17,7 +17,7 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: 5737c8e9cdbbd004a87fde76df269315
-    name: MyExposedParam
+    name: MegagameVolume
   - guid: d90e59f56a193ce4cb40ec13fabbf046
     name: MinigameVolume
   m_AudioMixerGroupViews:

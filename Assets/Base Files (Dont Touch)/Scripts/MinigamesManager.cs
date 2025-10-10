@@ -14,6 +14,7 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
     [SerializeField] private List<MinigameDefinition> allMinigames;
     [SerializeField] private int numRoundsInEasyMode;
     [SerializeField] private int numRoundsInNormalMode;
+    [SerializeField] private GameObject coverPrefab;
     public int numRoundsDebug { get { return numRoundsInNormalMode; }} 
 
     public Action<MinigameStatus, Action> OnBeginIntermission;
@@ -213,8 +214,12 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
             status.nextMinigame = null;
 
             // boss fight transition
+            DOVirtual.DelayedCall(2.33f, () => {
+                Instantiate(coverPrefab, transform.parent).GetComponent<Animator>().Play("fastClos");
+            }, false);
             DOVirtual.DelayedCall(2.5f, () => {
                 SceneManager.LoadScene("BossScene");
+                Destroy(transform.parent.gameObject);
             }, false);
         }
         else if (status.currentHealth <= 0) {
@@ -222,6 +227,9 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
             status.nextMinigame = null;
 
             // game over transition
+            DOVirtual.DelayedCall(2.33f, () => {
+                Instantiate(coverPrefab, transform.parent).GetComponent<Animator>().Play("fastClos");
+            }, false);
             DOVirtual.DelayedCall(2.5f, () => {
                 SceneManager.LoadScene("LoseScreen");
                 Destroy(transform.parent.gameObject);

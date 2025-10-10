@@ -765,15 +765,15 @@ RectTransform:
   m_GameObject: {fileID: 480822051}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2016762487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -75}
+  m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &480822053
 Animator:
@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1197,6 +1197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 21403712310278605, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}
+      propertyPath: coverPrefab
+      value: 
+      objectReference: {fileID: 807200054}
+    - target: {fileID: 21403712310278605, guid: 299268e851095ea429ce927bf2bef866,
+        type: 3}
       propertyPath: minigameDifficulty
       value: 1
       objectReference: {fileID: 0}
@@ -1354,17 +1359,17 @@ PrefabInstance:
         type: 3}
       propertyPath: minigameWin
       value: 
-      objectReference: {fileID: 8300000, guid: 56170f6b61ceefa42aff6c846e3c8793, type: 3}
+      objectReference: {fileID: 8300000, guid: cf805a81a25822643b5a8e35f267d895, type: 3}
     - target: {fileID: 1414119333161545066, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}
       propertyPath: minigameLose
       value: 
-      objectReference: {fileID: 8300000, guid: 15cd8a4e96f24724998656289a30a20e, type: 3}
+      objectReference: {fileID: 8300000, guid: 73f8fb526a0bc2e4eb112847902f2f70, type: 3}
     - target: {fileID: 1414119333161545066, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}
       propertyPath: minigameStart
       value: 
-      objectReference: {fileID: 8300000, guid: ba455d56f42c1d144a950588531649be, type: 3}
+      objectReference: {fileID: 8300000, guid: cf805a81a25822643b5a8e35f267d895, type: 3}
     - target: {fileID: 1414119333161545066, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}
       propertyPath: minigameSource
@@ -1898,6 +1903,12 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 744769246}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &807200054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4640267902302496925, guid: d44cc4f205501024a9841e2bdd96e2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1386353329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &998078754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,7 +2330,7 @@ PrefabInstance:
     - target: {fileID: 4640267902302496925, guid: d44cc4f205501024a9841e2bdd96e2d0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -18,4 +18,5 @@ MonoBehaviour:
   instruction: Shoot
   title: Archer
   creditsText: (Luxi, Jwilson, jdnl12, nokevinlol)Robinhood productions-8
-  minigameScreenshot: {fileID: 0}
+  minigameScreenshot: {fileID: -2677914877603906515, guid: d5e86e707e2c8494e817f3671b3cd21b,
+    type: 3}

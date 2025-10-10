@@ -13,6 +13,7 @@ public class TitleScreen : MonoBehaviour
     //public string sceneName;
 
     bool isLoading = false;
+    bool skipMusic = false;
     bool isMain = false;
     private void Start()
     {
@@ -31,12 +32,13 @@ public class TitleScreen : MonoBehaviour
         } else if (main_music)
         {
             //in credits
+            skipMusic = true;
             music = main_music;
         }
     }
     void Update()
     {
-        if (isLoading)
+        if (isLoading && !skipMusic)
         {
             music.volume -= Time.deltaTime * 2;
         }
@@ -46,6 +48,10 @@ public class TitleScreen : MonoBehaviour
         //only do once
         if (isLoading) return;
         isLoading = true;
+        if (isMain && sceneName == "TestCredits")
+        {
+            skipMusic = true;
+        }
 
         Instantiate(coverPrefab, transform).GetComponent<Animator>().Play("fastClos");
         DOVirtual.DelayedCall(.5f, () => {
