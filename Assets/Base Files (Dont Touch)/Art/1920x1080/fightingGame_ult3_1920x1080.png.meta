@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fightingGame_ult3_1920x1080_0: -8373762871072636927
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

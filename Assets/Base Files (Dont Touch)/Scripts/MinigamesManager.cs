@@ -75,8 +75,8 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
             int numNormalMinigames = normalMinigames.Count;
             int iOffset = 0;
             for (int i = numNormalMinigames; i < numberOfRounds; i++) {
-                normalMinigames.Add(normalMinigames[(i + iOffset) % numNormalMinigames]);
-                iOffset += UnityEngine.Random.Range(0, numNormalMinigames);
+                normalMinigames.Add(normalMinigames[iOffset % numNormalMinigames]);
+                iOffset += UnityEngine.Random.Range(1, numNormalMinigames);
             }
         }
 
@@ -224,6 +224,7 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
             // game over transition
             DOVirtual.DelayedCall(2.5f, () => {
                 SceneManager.LoadScene("LoseScreen");
+                Destroy(transform.parent.gameObject);
             }, false);
         }
         else {

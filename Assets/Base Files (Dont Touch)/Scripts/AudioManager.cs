@@ -9,7 +9,12 @@ using DG.Tweening;
 public class AudioManager : MonoBehaviour, IMinigameAudioManager
 {
 
+    [SerializeField] private AudioClip minigameStart;
+    [SerializeField] private AudioClip minigameWin;
+    [SerializeField] private AudioClip minigameLose;
+    [SerializeField] private AudioSource minigameSource;
     [SerializeField] private AudioMixerGroup minigameMixerGroup;
+    [SerializeField] private AudioMixerGroup megagameMixerGroup;
     public HashSet<AudioSource> occupiedAudioSources;
 
     public float MinigameVolume {
@@ -19,6 +24,19 @@ public class AudioManager : MonoBehaviour, IMinigameAudioManager
         }
         set {
             minigameMixerGroup.audioMixer.SetFloat("MinigameVolume", value);
+        }
+    }
+
+    public float MegagameVolume
+    {
+        get
+        {
+            megagameMixerGroup.audioMixer.GetFloat("MegagameVolume", out float value);
+            return value;
+        }
+        set
+        {
+            megagameMixerGroup.audioMixer.SetFloat("MegagameVolume", value);
         }
     }
 
@@ -50,9 +68,19 @@ public class AudioManager : MonoBehaviour, IMinigameAudioManager
 
     public void StartMinigameAudio() {
         minigameMixerGroup.audioMixer.SetFloat("MinigameVolume", 0);
+
+        DOTween.To(
+            () => MegagameVolume,
+            (value) => MegagameVolume = value,
+            -80f,
+            0.4f
+        )
+        .SetEase(Ease.InExpo);
     }
 
     public void FadeMinigameAudio() {
+        megagameMixerGroup.audioMixer.SetFloat("MegagameVolume", 0);
+
         DOTween.To(
             () => MinigameVolume,
             (value) => MinigameVolume = value,
@@ -62,8 +90,20 @@ public class AudioManager : MonoBehaviour, IMinigameAudioManager
         .SetEase(Ease.InExpo)
         .OnComplete(RemoveAudioSources);
     }
+    public void PlayStart()
+    {
+        minigameSource.PlayOneShot(minigameStart);
+    }
+    public void PlayWin()
+    {
+        minigameSource.PlayOneShot(minigameWin);
+    }
+    public void PlayLose()
+    {
+        minigameSource.PlayOneShot(minigameLose);
+    }
 
-    
+
 
     /*
     [SerializeField] private AudioClip readyMusic;

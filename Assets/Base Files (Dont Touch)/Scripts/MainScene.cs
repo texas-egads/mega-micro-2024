@@ -26,7 +26,6 @@ public class MainScene : MonoBehaviour
 
     private String baseStatusText;
     private float lastPressTime = 0;
-
     private int prevLives = 3;
 
     private void Awake() {
@@ -50,28 +49,32 @@ public class MainScene : MonoBehaviour
 
     private void Update() {
         // call the space pressed action whenever space is pressed
-        bool spacePressed = Input.GetAxis("Space") > 0;
+        /*bool spacePressed = Input.GetAxis("Space") > 0;
         if (spacePressed && !oldSpacePressed) {
             spacePressedAction?.Invoke();
             spacePressedAction = null;
-        }
+        }*/
 
-        float axis = Input.GetAxis("Horizontal");
 
-        if (axis < 0 && Managers.__instance.minigamesManager.minigameDifficulty != IMinigamesManager.Difficulty.EASY && Time.time - lastPressTime > 0.5f)
+        if (container.activeInHierarchy)
         {
-            Managers.__instance.minigamesManager.minigameDifficulty--;
-            lastPressTime = Time.time;
-        }
-        else if (axis > 0 && Managers.__instance.minigamesManager.minigameDifficulty != IMinigamesManager.Difficulty.HARD && Time.time - lastPressTime > 0.5f)
-        {
-            Managers.__instance.minigamesManager.minigameDifficulty++;
-            lastPressTime = Time.time;
+            float axis = Input.GetAxis("Horizontal");
+
+            if (axis < 0 && Managers.__instance.minigamesManager.minigameDifficulty != IMinigamesManager.Difficulty.EASY && Time.time - lastPressTime > 0.5f)
+            {
+                Managers.__instance.minigamesManager.minigameDifficulty--;
+                lastPressTime = Time.time;
+            }
+            else if (axis > 0 && Managers.__instance.minigamesManager.minigameDifficulty != IMinigamesManager.Difficulty.HARD && Time.time - lastPressTime > 0.5f)
+            {
+                Managers.__instance.minigamesManager.minigameDifficulty++;
+                lastPressTime = Time.time;
+            }
         }
 
         SetStatusText();
 
-        oldSpacePressed = spacePressed;
+        //oldSpacePressed = spacePressed;
     }
 
 
@@ -119,25 +122,32 @@ public class MainScene : MonoBehaviour
 
         SetStatusText();
 
+        // update old lives
+        for (int i = prevLives; i < 3; i++)
+        {
+            lifeAnims[i].Play("lifeFullAppear");
+        }
         // update new change in lives
         if (prevLives != status.currentHealth)
         {
             prevLives = status.currentHealth;
-            lifeAnims[status.currentHealth].Play("lifeAppear");
+            lifeAnims[prevLives].Play("lifeAppear");
         }
 
         // play character anims
         if(status.previousMinigameResult == WinLose.WIN)
         {
             playerAnim.Play("playerWin");
+            Managers.__instance.audioManager.PlayWin();
         } else if (status.previousMinigameResult == WinLose.LOSE)
         {
-            playerAnim.Play("playerLose");
+            playerAnim.Play(status.currentHealth == 0 ? "playerLoseHard" : "playerLose");
+            Managers.__instance.audioManager.PlayLose();
         }
 
         if (status.nextMinigame != null) {
             // prepare for the next minigame
-            DOVirtual.DelayedCall(3f, () => {
+            DOVirtual.DelayedCall(2.5f, () => {
                 OnProceed(status, intermissionFinishedCallback);
             }, false);
         }
@@ -145,7 +155,8 @@ public class MainScene : MonoBehaviour
 
     private void OnProceed(MinigameStatus status, Action intermissionFinishedCallback) {
         // start the sequence for the next minigame
-        gameStartAnim.Play("gameStart");
+        Managers.__instance.audioManager.PlayStart();
+        gameStartAnim.Play("testGameStart");
         instructionText.ShowImpactText(status.nextMinigame.instruction);
         DOVirtual.DelayedCall(1f, () => intermissionFinishedCallback?.Invoke(), false);
     }

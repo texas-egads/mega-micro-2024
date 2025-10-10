@@ -16,12 +16,15 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: 5737c8e9cdbbd004a87fde76df269315
+    name: MyExposedParam
   - guid: d90e59f56a193ce4cb40ec13fabbf046
     name: MinigameVolume
   m_AudioMixerGroupViews:
   - guids:
     - b7e34f5f8f031384d98c3902d2da86b8
     - 34e5c0513b2575e4db7462b087163a7a
+    - f72401abe8b97794893bd276d98daca8
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -36,6 +39,7 @@ AudioMixerGroupController:
   m_GroupID: b7e34f5f8f031384d98c3902d2da86b8
   m_Children:
   - {fileID: 3863657603078366325}
+  - {fileID: 1932806502491653253}
   m_Volume: 36cce7421c2d33e419a5ade90d0fe6ec
   m_Pitch: f788e748079c60a49811cb99ead2ea1e
   m_Send: 00000000000000000000000000000000
@@ -70,6 +74,25 @@ AudioMixerSnapshotController:
   m_SnapshotID: 8963a8de4a81aff40bdf089d7aa3dd49
   m_FloatValues: {}
   m_TransitionOverrides: {}
+--- !u!243 &1932806502491653253
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Megagame
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: f72401abe8b97794893bd276d98daca8
+  m_Children: []
+  m_Volume: 5737c8e9cdbbd004a87fde76df269315
+  m_Pitch: 0b3b4ee3f03d01b4a9eb5df722eb497d
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 9131783565480269022}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &2405990643668391087
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -103,3 +126,17 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &9131783565480269022
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attenuation
+  m_EffectID: d67839bcb3c26bf43aafb6e386ec69e1
+  m_EffectName: Attenuation
+  m_MixLevel: f7e9a37de5da8f544b2087b2c3ecb8cc
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0

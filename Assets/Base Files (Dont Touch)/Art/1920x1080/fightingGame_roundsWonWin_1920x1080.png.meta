@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fightingGame_roundsWonWin_1920x1080_0: 5584543881411734321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

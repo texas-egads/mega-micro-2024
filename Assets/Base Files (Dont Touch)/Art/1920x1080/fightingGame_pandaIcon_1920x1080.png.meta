@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fightingGame_pandaIcon_1920x1080_0: -1616740672693676989
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

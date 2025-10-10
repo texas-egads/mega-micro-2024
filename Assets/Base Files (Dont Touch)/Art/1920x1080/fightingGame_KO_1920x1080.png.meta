@@ -359,7 +359,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fightingGame_KO_1920x1080_0: -1041182647137715630
+      fightingGame_KO_1920x1080_1: 4701736416988975704
+      fightingGame_KO_1920x1080_2: -8708100711080178054
+      fightingGame_KO_1920x1080_3: 7050379909063540095
+      fightingGame_KO_1920x1080_4: 6478522029986400981
+      fightingGame_KO_1920x1080_5: -3098429185443857823
+      fightingGame_KO_1920x1080_6: -8440236838198906274
+      fightingGame_KO_1920x1080_7: -8044437859890516210
+      fightingGame_KO_1920x1080_8: 6849184324015467422
+      fightingGame_KO_1920x1080_9: -3907644196452743572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
