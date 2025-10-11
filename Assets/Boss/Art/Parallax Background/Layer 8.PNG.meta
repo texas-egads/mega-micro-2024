@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: def2ad48f8491894fbf94212645de44c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 642146194206879159
+    second: Layer 8_0
+  - first:
+      213: -1293320218485471226
+    second: Layer 8_1
+  - first:
+      213: -8886664474968954683
+    second: Layer 8_2
+  - first:
+      213: 3905654144765499462
+    second: Layer 8_3
+  - first:
+      213: 4842849900412622406
+    second: Layer 8_4
+  - first:
+      213: 738291219049279584
+    second: Layer 8_5
+  - first:
+      213: 3766643279790981678
+    second: Layer 8_6
+  - first:
+      213: 5651238902577436229
+    second: Layer 8_7
+  - first:
+      213: 5640571253980897006
+    second: Layer 8_8
+  - first:
+      213: 2122339667436997167
+    second: Layer 8_9
+  - first:
+      213: 1887268349180848745
+    second: Layer 8_10
+  - first:
+      213: 1770423863962824047
+    second: Layer 8_11
+  - first:
+      213: -9000780227137525206
+    second: Layer 8_12
+  - first:
+      213: 1081094125196098954
+    second: Layer 8_13
+  - first:
+      213: -6124170794125817042
+    second: Layer 8_14
+  - first:
+      213: -7491912593111757756
+    second: Layer 8_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Layer 8_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 853
+        width: 231
+        height: 2147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bde197bf8c59e800800000000000000
+      internalID: 642146194206879159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 634
+        width: 378
+        height: 2366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608c7541d143d0ee0800000000000000
+      internalID: -1293320218485471226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 847
+        width: 237
+        height: 2153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8646b5eb93ca480800000000000000
+      internalID: -8886664474968954683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_3
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 714
+        width: 405
+        height: 2286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648974a60cba33630800000000000000
+      internalID: 3905654144765499462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_4
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 710
+        width: 334
+        height: 2290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64651ae6352453340800000000000000
+      internalID: 4842849900412622406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_5
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 928
+        width: 420
+        height: 2072
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060f83cb3ffee3a00800000000000000
+      internalID: 738291219049279584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_6
+      rect:
+        serializedVersion: 2
+        x: 2734
+        y: 826
+        width: 254
+        height: 2174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22cd8f3b1ec54430800000000000000
+      internalID: 3766643279790981678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_7
+      rect:
+        serializedVersion: 2
+        x: 2986
+        y: 891
+        width: 197
+        height: 2109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5461ff027db3d6e40800000000000000
+      internalID: 5651238902577436229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_8
+      rect:
+        serializedVersion: 2
+        x: 3424
+        y: 907
+        width: 376
+        height: 2093
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee9fc3aba5574e40800000000000000
+      internalID: 5640571253980897006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_9
+      rect:
+        serializedVersion: 2
+        x: 4091
+        y: 901
+        width: 236
+        height: 2099
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2a8d42dea0147d10800000000000000
+      internalID: 2122339667436997167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_10
+      rect:
+        serializedVersion: 2
+        x: 4566
+        y: 773
+        width: 404
+        height: 2227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a23cc709ce03a10800000000000000
+      internalID: 1887268349180848745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_11
+      rect:
+        serializedVersion: 2
+        x: 4900
+        y: 769
+        width: 337
+        height: 2231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6de069cf1fc19810800000000000000
+      internalID: 1770423863962824047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_12
+      rect:
+        serializedVersion: 2
+        x: 5254
+        y: 879
+        width: 377
+        height: 2121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2aab14521ec61380800000000000000
+      internalID: -9000780227137525206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_13
+      rect:
+        serializedVersion: 2
+        x: 5765
+        y: 863
+        width: 198
+        height: 2137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d33150161d00f00800000000000000
+      internalID: 1081094125196098954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_14
+      rect:
+        serializedVersion: 2
+        x: 6203
+        y: 879
+        width: 377
+        height: 2121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b0f482c13920ba0800000000000000
+      internalID: -6124170794125817042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 8_15
+      rect:
+        serializedVersion: 2
+        x: 6870
+        y: 880
+        width: 130
+        height: 2120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44c4c4fb031670890800000000000000
+      internalID: -7491912593111757756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Layer 8_0: 642146194206879159
+      Layer 8_1: -1293320218485471226
+      Layer 8_10: 1887268349180848745
+      Layer 8_11: 1770423863962824047
+      Layer 8_12: -9000780227137525206
+      Layer 8_13: 1081094125196098954
+      Layer 8_14: -6124170794125817042
+      Layer 8_15: -7491912593111757756
+      Layer 8_2: -8886664474968954683
+      Layer 8_3: 3905654144765499462
+      Layer 8_4: 4842849900412622406
+      Layer 8_5: 738291219049279584
+      Layer 8_6: 3766643279790981678
+      Layer 8_7: 5651238902577436229
+      Layer 8_8: 5640571253980897006
+      Layer 8_9: 2122339667436997167
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

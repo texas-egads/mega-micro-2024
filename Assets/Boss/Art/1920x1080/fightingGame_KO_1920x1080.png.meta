@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: f60e7744d95b4c947a169d789e7b4151
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1041182647137715630
+    second: fightingGame_KO_1920x1080_0
+  - first:
+      213: 4701736416988975704
+    second: fightingGame_KO_1920x1080_1
+  - first:
+      213: -8708100711080178054
+    second: fightingGame_KO_1920x1080_2
+  - first:
+      213: 7050379909063540095
+    second: fightingGame_KO_1920x1080_3
+  - first:
+      213: 6478522029986400981
+    second: fightingGame_KO_1920x1080_4
+  - first:
+      213: -3098429185443857823
+    second: fightingGame_KO_1920x1080_5
+  - first:
+      213: -8440236838198906274
+    second: fightingGame_KO_1920x1080_6
+  - first:
+      213: -8044437859890516210
+    second: fightingGame_KO_1920x1080_7
+  - first:
+      213: 6849184324015467422
+    second: fightingGame_KO_1920x1080_8
+  - first:
+      213: -3907644196452743572
+    second: fightingGame_KO_1920x1080_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fightingGame_KO_1920x1080_0
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 304
+        width: 934
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a3e0b16e9fc81f0800000000000000
+      internalID: -1041182647137715630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightingGame_KO_1920x1080_1
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 463
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85255224c5cef3140800000000000000
+      internalID: 4701736416988975704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightingGame_KO_1920x1080_2
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 449
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7e4dbf6a8c962780800000000000000
+      internalID: -8708100711080178054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightingGame_KO_1920x1080_3
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 414
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d784b3c2bf7d160800000000000000
+      internalID: 7050379909063540095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightingGame_KO_1920x1080_4
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 391
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dac1ea267558e950800000000000000
+      internalID: 6478522029986400981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightingGame_KO_1920x1080_5
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 404
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a7aef621b2005d0800000000000000
+      internalID: -3098429185443857823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightingGame_KO_1920x1080_6
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 378
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52fcfe50514eda80800000000000000
+      internalID: -8440236838198906274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightingGame_KO_1920x1080_7
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 359
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0fa58f336a6c5090800000000000000
+      internalID: -8044437859890516210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightingGame_KO_1920x1080_8
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 326
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9bad1aaad03d0f50800000000000000
+      internalID: 6849184324015467422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightingGame_KO_1920x1080_9
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 301
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6641d19e4245c9c0800000000000000
+      internalID: -3907644196452743572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fightingGame_KO_1920x1080_0: -1041182647137715630
+      fightingGame_KO_1920x1080_1: 4701736416988975704
+      fightingGame_KO_1920x1080_2: -8708100711080178054
+      fightingGame_KO_1920x1080_3: 7050379909063540095
+      fightingGame_KO_1920x1080_4: 6478522029986400981
+      fightingGame_KO_1920x1080_5: -3098429185443857823
+      fightingGame_KO_1920x1080_6: -8440236838198906274
+      fightingGame_KO_1920x1080_7: -8044437859890516210
+      fightingGame_KO_1920x1080_8: 6849184324015467422
+      fightingGame_KO_1920x1080_9: -3907644196452743572
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

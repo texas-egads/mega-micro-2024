@@ -9,8 +9,12 @@ public class Player : MonoBehaviour
     public float crouchSpeedRatio;
     public float jumpSpeed;
     public float jumpHoldTime;
+    public float hitstun;
+    public float hitstunStrength;
     public float gravMod;
     public float groundY;
+    public float rallyTime;
+    public float maxHealth;
     // handle player states
     private State state;
     private MoveState moveState;
@@ -19,6 +23,10 @@ public class Player : MonoBehaviour
     private float jumpHoldTimer;
     private bool canCombo;
     private Combo combo;
+    private bool canBlock;
+    private float stunTimer;
+    private float rallyTimer;
+    private bool isDead;
     private enum Combo
     {
         NONE,
@@ -50,14 +58,22 @@ public class Player : MonoBehaviour
     // handle player visuals
     public Animator anim;
     public SpriteRenderer sprite;
+    public Boss boss;
+    public Transform[] healthbars;
+    public GameObject[] attackPrefabs; // 0:light; 1:heavy; 2:air; 3: crouch
+    public UltimateCharge[] ultimateCharges; 
 
     // handle other
     private float dir;
+    private float health;
+    private int ultCharges;
+    private float oldHealth;
     private float horizVel;
     private float vertVel;
 
     void Start()
     {
+        health = maxHealth;
         state = State.STANDING;
         moveState = MoveState.IDLE;
     }
@@ -69,57 +85,72 @@ public class Player : MonoBehaviour
         {
             if(jumpHoldTimer < 0 || !Input.GetKey(KeyCode.W)) vertVel -= Time.deltaTime * gravMod;
             transform.Translate(new Vector2(0, vertVel * Time.deltaTime));
-            checkGround();
+            CheckGround();
         }
 
         // inputs
         if (BossManager.Instance.state == BossManager.State.PLAY)
         {
-            doMovement();
-            doCrouch();
-            doMoves();
+            if(!isDead) DoMoves();
+            if (moveState != MoveState.STUNNED)
+            {
+                DoMovement();
+                DoCrouch();
+            } else
+            {
+                DoStun();
+            }
         }
 
+        // constrain position
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -10, boss.transform.position.x - 2), transform.position.y, transform.position.z);
 
         // timers
+        DoRally();
+        DoDeadSlow();
         bufferTimer -= Time.unscaledDeltaTime;
         jumpHoldTimer -= Time.deltaTime;
     }
 
     // handle movement/crouching
-    void doMovement(){
+    void DoMovement(){
         // handle no movement allowed
-        if (state != State.AIRBORNE && !checkInput(moveStates))  return;
+        if (state != State.AIRBORNE && !CheckInput(moveStates))  return;
 
-        //TODO block movement when too close to enemy
         // handle L/R
         float horizInput = Input.GetAxis("Horizontal");
         horizVel = horizInput * topSpeed * (state == State.CROUCHED ? crouchSpeedRatio : 1);
         // handle direction
         if (state != State.AIRBORNE)
         {
-            //dir = Mathf.Sign(horizInput);
             sprite.flipX = dir == -1 ? true : false;
         }
         // do movement
         if (Mathf.Abs(horizVel) > 0.01f) {
+            //TODO sound
             anim.SetInteger("moving", (int)Mathf.Sign(horizInput));
             transform.Translate(Vector2.right * horizVel * Time.deltaTime);
         } else
         {
+            //TODO sound
             anim.SetInteger("moving", 0);
         }
     }
-    void doCrouch()
+    public void DoStepSound()
+    {
+        BudioManager.Instance.PlayMove(0);
+    }
+    void DoCrouch()
     {
         // handle no movement allowed
-        if (!checkInput(crouchStates, true)) return;
+        if (!CheckInput(crouchStates, true)) return;
 
         // handle input/states/anims
         if (Input.GetKey(KeyCode.S))
         {
             if (state != State.CROUCHED)
             {
+                //TODO sound(?)
                 state = State.CROUCHED;
                 anim.Play("crouch");
                 anim.SetBool("crouched", true);
@@ -127,13 +158,14 @@ public class Player : MonoBehaviour
         } else if (state == State.CROUCHED)
         {
             state = State.STANDING;
+            //TODO sound(?)
             anim.Play("uncrouch");
             anim.SetBool("crouched", false);
         }
 
         // TODO hitbox manipulation
     }
-    void checkGround()
+    void CheckGround()
     {
         // change state + more on grounded
         if(transform.position.y <= groundY)
@@ -142,98 +174,133 @@ public class Player : MonoBehaviour
             state = State.STANDING;
             vertVel = 0;
             anim.SetBool("airborne", false);
-            anim.Play("land");
-            tryBuffer();
+            if(moveState != MoveState.STUNNED) anim.Play("land");
+            //TODO sound
+            TryBuffer();
             //TODO maybe clear air attack hitbox
         }
     }
 
     // handle moves
-    void doMoves()
+    void DoMoves()
     {
+        stunTimer = hitstun;
         // light
-        if(Input.GetMouseButtonDown(0) && tryMove(attackStates, MoveState.LIGHT))
+        if (Input.GetKeyDown(KeyCode.K) && TryMove(attackStates, MoveState.LIGHT))
         {
-            doLight();
+            DoLight();
         }
         // heavy
-        if(Input.GetMouseButtonDown(1) && tryMove(attackStates, MoveState.HEAVY))
+        else if(Input.GetKeyDown(KeyCode.L) && TryMove(attackStates, MoveState.HEAVY))
         {
-            doHeavy();
+            DoHeavy();
         }
         // block
-        if (Input.GetKeyDown(KeyCode.Space) && tryMove(blockStates, MoveState.BLOCK, true))
+        else if (Input.GetKeyDown(KeyCode.Space) && TryMove(blockStates, MoveState.BLOCK, true))
         {
-            doBlock();
+            DoBlock();
         }
         // jump
-        if (Input.GetKeyDown(KeyCode.W) && tryMove(jumpStates, MoveState.JUMP, true))
+        else if (Input.GetKeyDown(KeyCode.W) && TryMove(jumpStates, MoveState.JUMP, true))
         {
-            doJump();
+            DoJump();
         }
 
     }
+    void DoStun()
+    {
+        stunTimer -= Time.deltaTime;
+        if(state != State.AIRBORNE)
+        {
+            horizVel = Mathf.Clamp(horizVel + hitstunStrength / hitstun * Time.deltaTime * 2, -hitstunStrength, 0);
+        }
+        transform.Translate(Vector2.right * horizVel * Time.deltaTime);
+        if (!isDead && stunTimer <= 0)
+        {
+            anim.Play("idle");
+            ClearCombo();
+        }
+    }
+    void DoRally()
+    {
+        if (rallyTimer < rallyTime)
+        {
+            rallyTimer += Time.deltaTime;
+            Mathf.Lerp(oldHealth, healthbars[0].localScale.x, Mathf.Clamp01(rallyTimer / rallyTime));
+        }
+    }
+    void DoDeadSlow()
+    {
+        if (isDead)
+        {
+            Time.timeScale = Mathf.Clamp(Time.timeScale - Time.unscaledDeltaTime, .5f, 1);
+        }
+    }
 
     // moves
-    void doLight()
+    void DoLight()
     {
         // convert to air/crouch attack
-        if (convertAttack()) return;
+        if (ConvertAttack()) return;
 
         // do light
         moveState = MoveState.LIGHT;
         switch (combo)
         {
             default:
+                //TODO sound
                 anim.Play("lightAttack");
                 //TODO spawn hitbox
                 combo = Combo.LIGHT;
                 break;
         }
     }
-    void doHeavy()
+    void DoHeavy()
     {
         // convert to air/crouch attack
-        if (convertAttack()) return;
+        if (ConvertAttack()) return;
 
         // do heavy
         moveState = MoveState.HEAVY;
         switch (combo)
         {
             default:
+                //TODO sound
                 anim.Play("heavyAttack");
                 //TODO spawn hitbox
                 combo = Combo.HEAVY;
                 break;
         }
     }
-    void doAirAttack()
+    void DoAirAttack()
     {
         // do air
         moveState = MoveState.LIGHT;
         switch (combo)
         {
             default:
+                //TODO sound
                 anim.Play("airAttack");
                 //TODO spawn hitbox
                 combo = Combo.NONE;
                 break;
         }
     }
-    void doCrouchAttack()
+    void DoCrouchAttack()
     {
         // do air
         moveState = MoveState.LIGHT;
         switch (combo)
         {
             default:
+                //TODO sound
                 anim.Play("crouchAttack");
                 //TODO spawn hitbox
                 combo = Combo.NONE;
                 break;
         }
     }
-    void doBlock()
+    void DoBlock()
     {
         // only block on ground
         if (state == State.AIRBORNE || state == State.CROUCHED) return;
@@ -242,28 +309,32 @@ public class Player : MonoBehaviour
         switch (combo)
         {
             default:
+                //TODO sound
+                canBlock = true;
                 anim.Play("block");
                 combo = Combo.NONE;
                 break;
         }
     }
-    void doJump()
+    void DoJump()
     {
         if (state != State.STANDING) return;
         vertVel = jumpSpeed;
         jumpHoldTimer = jumpHoldTime;
+        //TODO sound
         anim.SetBool("airborne", true);
         anim.Play("jump");
         moveState = MoveState.JUMP;
         state = State.AIRBORNE;
     }
     // use buffer
-    void doBuffer()
+    void DoBuffer()
     {
         // cancel crouch state if needed
         if (state == State.CROUCHED && !Input.GetKey(KeyCode.S))
         {
             state = State.STANDING;
+            //TODO sound (?)
             anim.Play("uncrouch");
             anim.SetBool("crouched", false);
             // TODO hitbox manipulation
@@ -280,16 +351,16 @@ public class Player : MonoBehaviour
         switch (heldState)
         {
             case MoveState.LIGHT:
-                doLight();
+                DoLight();
                 break;
             case MoveState.HEAVY:
-                doHeavy();
+                DoHeavy();
                 break;
             case MoveState.BLOCK:
-                if (canCombo) doBlock();
+                if (canCombo) DoBlock();
                 return;
             case MoveState.JUMP:
-                doJump();
+                DoJump();
                 break;
             default:
                 break;
@@ -301,45 +372,138 @@ public class Player : MonoBehaviour
         }
     }
     // clear combo
-    void clearCombo()
+    void ClearCombo()
     {
-        if (bufferedState == MoveState.BLOCK) doBlock();
+        if (bufferedState == MoveState.BLOCK) DoBlock();
         canCombo = false;
         combo = Combo.NONE;
         moveState = MoveState.IDLE;
     }
     // buffer or clear combo
-    void tryBuffer()
+    void TryBuffer()
     {
         // do cancel
         canCombo = false;
         combo = Combo.NONE;
         moveState = MoveState.IDLE;
         // try buffer
-        doBuffer();
+        DoBuffer();
     }
+    // failed to time block
+    public void DisableBlock()
+    {
+        canBlock = false;
+    }
+    // create attack hurtbox
+    public void SpawnAttack(int index)
+    {
+        Instantiate(attackPrefabs[index], transform);
+    }
+    // successful block
+    public void DoSuccessfulBlock()
+    {
+        if(ultCharges < 3) ultimateCharges[ultCharges].Activate();
+        ultCharges++;
+        //TODO sound
+        DoBuffer();
+    }
+    // take/heal damage
+    public void TakeDamage(float damage)
+    {
+        // exit if dead
+        if (isDead) return;
 
+        // handle block
+        if (canBlock)
+        {
+            DoSuccessfulBlock();
+            return;
+        }
+
+        // health changes
+        health -= damage;
+        healthbars[0].localScale = new Vector3(health/maxHealth, 1);
+        oldHealth = healthbars[1].localScale.x;
+        rallyTimer = 0;
+        moveState = MoveState.STUNNED;
+
+        // handle death
+        if(health <= 0)
+        {
+            vertVel = hitstunStrength * 2;
+            horizVel = -hitstunStrength * 2;
+            transform.Translate(Vector3.up * 0.05f);
+            isDead = true;
+            BossManager.Instance.ShowKO();
+            BudioManager.Instance.PlayRoundStart(2);
+            anim.Play("die");
+            StartCoroutine(BossManager.Instance.ResetGame(1));
+            return;
+        }
+
+        //TODO sound
+        anim.Play("hitstun");
+        boss.HealRally();
+
+        // reset state
+        horizVel = -hitstunStrength;
+        if(state == State.AIRBORNE)
+        {
+            vertVel = hitstunStrength;
+        }
+        if (state == State.CROUCHED)
+        {
+            state = State.STANDING;
+        }
+    }
+    public void HealRally()
+    {
+        rallyTimer = rallyTime;
+        health = healthbars[1].localScale.x * maxHealth;
+        oldHealth = health;
+        healthbars[0].localScale = new Vector3(health / maxHealth, 1);
+        healthbars[1].localScale = new Vector3(health / maxHealth, 1);
+    }
+    // reset game state
+    public void ResetState()
+    {
+        Time.timeScale = 1f;
+        anim.Play("idle");
+        transform.position = Vector3.left * 4;
+        state = State.STANDING;
+        moveState = MoveState.IDLE;
+        health = maxHealth;
+        oldHealth = maxHealth;
+        healthbars[0].localScale = Vector3.one;
+        healthbars[1].localScale = Vector3.one;
+        ultCharges = 0;
+        isDead = false;
+        foreach (UltimateCharge uc in ultimateCharges)
+        {
+            uc.Deactivate();
+        }
+    }
 
     /* 
      * helper methods
      * */
     // convert an attack to an air/crouch attack
-    bool convertAttack()
+    bool ConvertAttack()
     {
         if (state == State.AIRBORNE)
         {
-            doAirAttack();
+            DoAirAttack();
             return true;
         }
         else if (state == State.CROUCHED)
         {
-            doCrouchAttack();
+            DoCrouchAttack();
             return true;
         }
         return false;
     }
     // returns whether an input is acceptable
-    bool checkInput(MoveState[] valids, bool noAirborne = false)
+    bool CheckInput(MoveState[] valids, bool noAirborne = false)
     {
         if (noAirborne && state == State.AIRBORNE) return false;
         bool valid = false;
@@ -352,22 +516,16 @@ public class Player : MonoBehaviour
 
     }
     // returns true if a move is immediately executable, and buffers it otherwise
-    bool tryMove(MoveState[] valids, MoveState ms, bool noAirborne = false)
+    bool TryMove(MoveState[] valids, MoveState ms, bool noAirborne = false)
     {
-        bool valid = checkInput(valids, noAirborne);
+        bool valid = CheckInput(valids, noAirborne);
         // buffer on fail
         if (!valid)
         {
             bufferedState = ms;
             bufferTimer = inputBufferTime;
-            if (canCombo) doBuffer();
+            if (canCombo) DoBuffer();
         }
         return valid;
     }
 }
-
-/**
- * TODO
- *      projectiles
- *      health script (hitstun/downed stuff)
- */
