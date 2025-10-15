@@ -1,14 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UltimateCharge : MonoBehaviour
 {
     public float appearTime;
-    private SpriteRenderer sprite;
+    private Image sprite;
     private float appearTimer;
     private bool active;
     void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
+        sprite = GetComponent<Image>();
         appearTimer = appearTime;
         sprite.color = Color.clear;
     }

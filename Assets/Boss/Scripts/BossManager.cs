@@ -58,7 +58,7 @@ public class BossManager : MonoBehaviour
                 inCountdown = true;
                 BudioManager.Instance.PlayRoundStart(0);
             }
-            timerText.text = Mathf.Ceil(countdownTimer).ToString("D1");
+            timerText.text = ((long)Mathf.Ceil(countdownTimer)).ToString("D1");
             countdownTimer -= Time.deltaTime;
             if (countdownTimer <= 0)
             {
@@ -75,7 +75,7 @@ public class BossManager : MonoBehaviour
             if(gameTimer < 60)
             {
                 timerText.fontSize = 36;
-                timerText.text = "0:" + countdownTimer.ToString("D2");
+                timerText.text = "0:" + ((long)countdownTimer).ToString("D2");
             }
             if(gameTimer <= 0)
             {

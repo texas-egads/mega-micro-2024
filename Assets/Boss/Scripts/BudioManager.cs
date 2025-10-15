@@ -7,8 +7,8 @@ public class BudioManager : MonoBehaviour
     public AudioSource musicSource;
     public AudioSource source;
     public AudioClip[] roundStart; // round start, fight, KO
-    public AudioClip[] attackSounds; // light, heavy
-    public AudioClip[] moveSounds; // step, jump, land
+    public AudioClip[] attackSounds; // light, heavy, block, succeed block
+    public AudioClip[] moveSounds; // step, jump, land, crouch, take damage
 
     void Start()
     {

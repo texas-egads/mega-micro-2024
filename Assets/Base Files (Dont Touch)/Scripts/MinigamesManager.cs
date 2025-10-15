@@ -215,10 +215,11 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
 
             // boss fight transition
             DOVirtual.DelayedCall(2.33f, () => {
+                //TODO change to other graphic
                 Instantiate(coverPrefab, transform.parent).GetComponent<Animator>().Play("fastClos");
             }, false);
             DOVirtual.DelayedCall(2.5f, () => {
-                SceneManager.LoadScene("BossScene");
+                SceneManager.LoadScene("WinScene");
                 Destroy(transform.parent.gameObject);
             }, false);
         }

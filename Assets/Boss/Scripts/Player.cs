@@ -59,7 +59,8 @@ public class Player : MonoBehaviour
     public Animator anim;
     public SpriteRenderer sprite;
     public Boss boss;
-    public Transform[] healthbars;
+    public Collider2D topCollider;
+    public RectTransform[] healthbars;
     public GameObject[] attackPrefabs; // 0:light; 1:heavy; 2:air; 3: crouch
     public UltimateCharge[] ultimateCharges; 
 
@@ -103,6 +104,7 @@ public class Player : MonoBehaviour
         }
 
         // constrain position
+        topCollider.enabled = state == State.CROUCHED;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -10, boss.transform.position.x - 2), transform.position.y, transform.position.z);
 
         // timers
@@ -127,12 +129,10 @@ public class Player : MonoBehaviour
         }
         // do movement
         if (Mathf.Abs(horizVel) > 0.01f) {
-            //TODO sound
             anim.SetInteger("moving", (int)Mathf.Sign(horizInput));
             transform.Translate(Vector2.right * horizVel * Time.deltaTime);
         } else
         {
-            //TODO sound
             anim.SetInteger("moving", 0);
         }
     }
@@ -150,7 +150,7 @@ public class Player : MonoBehaviour
         {
             if (state != State.CROUCHED)
             {
-                //TODO sound(?)
+                BudioManager.Instance.PlayMove(3);
                 state = State.CROUCHED;
                 anim.Play("crouch");
                 anim.SetBool("crouched", true);
@@ -158,12 +158,10 @@ public class Player : MonoBehaviour
         } else if (state == State.CROUCHED)
         {
             state = State.STANDING;
-            //TODO sound(?)
+            BudioManager.Instance.PlayMove(3);
             anim.Play("uncrouch");
             anim.SetBool("crouched", false);
         }
-
-        // TODO hitbox manipulation
     }
     void CheckGround()
     {
@@ -175,9 +173,8 @@ public class Player : MonoBehaviour
             vertVel = 0;
             anim.SetBool("airborne", false);
             if(moveState != MoveState.STUNNED) anim.Play("land");
-            //TODO sound
+            BudioManager.Instance.PlayMove(2);
             TryBuffer();
-            //TODO maybe clear air attack hitbox
         }
     }
 
@@ -226,7 +223,7 @@ public class Player : MonoBehaviour
         if (rallyTimer < rallyTime)
         {
             rallyTimer += Time.deltaTime;
-            Mathf.Lerp(oldHealth, healthbars[0].localScale.x, Mathf.Clamp01(rallyTimer / rallyTime));
+            Mathf.Lerp(oldHealth, healthbars[0].sizeDelta.x, Mathf.Clamp01(rallyTimer / rallyTime));
         }
     }
     void DoDeadSlow()
@@ -248,9 +245,8 @@ public class Player : MonoBehaviour
         switch (combo)
         {
             default:
-                //TODO sound
+                BudioManager.Instance.PlayAttack(0);
                 anim.Play("lightAttack");
-                //TODO spawn hitbox
                 combo = Combo.LIGHT;
                 break;
         }
@@ -265,9 +261,8 @@ public class Player : MonoBehaviour
         switch (combo)
         {
             default:
-                //TODO sound
+                BudioManager.Instance.PlayAttack(1);
                 anim.Play("heavyAttack");
-                //TODO spawn hitbox
                 combo = Combo.HEAVY;
                 break;
         }
@@ -279,9 +274,8 @@ public class Player : MonoBehaviour
         switch (combo)
         {
             default:
-                //TODO sound
+                BudioManager.Instance.PlayAttack(0);
                 anim.Play("airAttack");
-                //TODO spawn hitbox
                 combo = Combo.NONE;
                 break;
         }
@@ -293,9 +287,8 @@ public class Player : MonoBehaviour
         switch (combo)
         {
             default:
-                //TODO sound
+                BudioManager.Instance.PlayAttack(0);
                 anim.Play("crouchAttack");
-                //TODO spawn hitbox
                 combo = Combo.NONE;
                 break;
         }
@@ -309,7 +302,7 @@ public class Player : MonoBehaviour
         switch (combo)
         {
             default:
-                //TODO sound
+                BudioManager.Instance.PlayAttack(2);
                 canBlock = true;
                 anim.Play("block");
                 combo = Combo.NONE;
@@ -321,7 +314,7 @@ public class Player : MonoBehaviour
         if (state != State.STANDING) return;
         vertVel = jumpSpeed;
         jumpHoldTimer = jumpHoldTime;
-        //TODO sound
+        BudioManager.Instance.PlayMove(1);
         anim.SetBool("airborne", true);
         anim.Play("jump");
         moveState = MoveState.JUMP;
@@ -334,10 +327,9 @@ public class Player : MonoBehaviour
         if (state == State.CROUCHED && !Input.GetKey(KeyCode.S))
         {
             state = State.STANDING;
-            //TODO sound (?)
+            BudioManager.Instance.PlayMove(3);
             anim.Play("uncrouch");
             anim.SetBool("crouched", false);
-            // TODO hitbox manipulation
         }
         // use buffer
         MoveState heldState = bufferedState;
@@ -404,7 +396,7 @@ public class Player : MonoBehaviour
     {
         if(ultCharges < 3) ultimateCharges[ultCharges].Activate();
         ultCharges++;
-        //TODO sound
+        BudioManager.Instance.PlayAttack(3);
         DoBuffer();
     }
     // take/heal damage
@@ -422,8 +414,8 @@ public class Player : MonoBehaviour
 
         // health changes
         health -= damage;
-        healthbars[0].localScale = new Vector3(health/maxHealth, 1);
-        oldHealth = healthbars[1].localScale.x;
+        healthbars[0].sizeDelta = new Vector2(health/maxHealth * 577, 78);
+        oldHealth = healthbars[1].sizeDelta.x;
         rallyTimer = 0;
         moveState = MoveState.STUNNED;
 
@@ -441,7 +433,8 @@ public class Player : MonoBehaviour
             return;
         }
 
-        //TODO sound
+        // sounds and anims
+        BudioManager.Instance.PlayMove(4);
         anim.Play("hitstun");
         boss.HealRally();
 
@@ -459,10 +452,10 @@ public class Player : MonoBehaviour
     public void HealRally()
     {
         rallyTimer = rallyTime;
-        health = healthbars[1].localScale.x * maxHealth;
+        health = healthbars[1].sizeDelta.x / 577f * maxHealth;
         oldHealth = health;
-        healthbars[0].localScale = new Vector3(health / maxHealth, 1);
-        healthbars[1].localScale = new Vector3(health / maxHealth, 1);
+        healthbars[0].sizeDelta = new Vector2(health / maxHealth * 577, 78);
+        healthbars[1].sizeDelta = new Vector2(health / maxHealth * 577, 78);
     }
     // reset game state
     public void ResetState()
@@ -474,8 +467,8 @@ public class Player : MonoBehaviour
         moveState = MoveState.IDLE;
         health = maxHealth;
         oldHealth = maxHealth;
-        healthbars[0].localScale = Vector3.one;
-        healthbars[1].localScale = Vector3.one;
+        healthbars[0].sizeDelta = new Vector2(577, 78);
+        healthbars[1].sizeDelta = new Vector2(577, 78);
         ultCharges = 0;
         isDead = false;
         foreach (UltimateCharge uc in ultimateCharges)
