@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Screens/StartScreen.unity
+    guid: 1e79276c0860dcf4f9ab2053f8dccfdc
+  - enabled: 1
     path: Assets/Base Files (Dont Touch)/Scenes/TitleScreen.unity
     guid: 771da822a5d0e74419e56a15f7d6a649
   - enabled: 1
@@ -47,9 +50,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Screens/LoseScreen.unity
     guid: acafb9cd71c7cb1499b3f5034727c779
-  - enabled: 1
-    path: Assets/Screens/StartScreen.unity
-    guid: 1e79276c0860dcf4f9ab2053f8dccfdc
   - enabled: 1
     path: Assets/Screens/WinScreen.unity
     guid: 1047c1fb32b969a47810a657d2e6484a

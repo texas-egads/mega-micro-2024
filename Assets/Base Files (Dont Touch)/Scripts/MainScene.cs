@@ -11,6 +11,7 @@ public class MainScene : MonoBehaviour
     public GameObject container;
     public TextMeshProUGUI statusText;
     public TextMeshProUGUI promptText;
+    public Text[] roundText;
     public InstructionText instructionText;
     public Image background;
     public Animator[] lifeAnims;
@@ -56,7 +57,7 @@ public class MainScene : MonoBehaviour
         }*/
 
 
-        if (container.activeInHierarchy)
+        /*if (container.activeInHierarchy)
         {
             float axis = Input.GetAxis("Horizontal");
 
@@ -70,7 +71,7 @@ public class MainScene : MonoBehaviour
                 Managers.__instance.minigamesManager.minigameDifficulty++;
                 lastPressTime = Time.time;
             }
-        }
+        }*/
 
         SetStatusText();
 
@@ -121,6 +122,8 @@ public class MainScene : MonoBehaviour
             $"Overall game status: {(status.gameResult == WinLose.WIN ? "Won" : status.gameResult == WinLose.LOSE ? "Lost" : "Playing")}";
 
         SetStatusText();
+        roundText[0].text = $"{status.nextRoundNumber}";
+        roundText[1].text = $"{status.nextRoundNumber}";
 
         // update old lives
         for (int i = prevLives; i < 3; i++)

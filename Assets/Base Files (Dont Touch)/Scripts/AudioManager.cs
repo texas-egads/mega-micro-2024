@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour, IMinigameAudioManager
     [SerializeField] private AudioClip minigameStart;
     [SerializeField] private AudioClip minigameWin;
     [SerializeField] private AudioClip minigameLose;
+    [SerializeField] private AudioClip whoosh;
     [SerializeField] private AudioSource minigameSource;
     [SerializeField] private AudioMixerGroup minigameMixerGroup;
     [SerializeField] private AudioMixerGroup megagameMixerGroup;
@@ -92,7 +93,7 @@ public class AudioManager : MonoBehaviour, IMinigameAudioManager
     }
     public void PlayStart()
     {
-        minigameSource.PlayOneShot(minigameStart);
+        minigameSource.PlayOneShot(minigameStart, 2.5f);
     }
     public void PlayWin()
     {
@@ -101,6 +102,7 @@ public class AudioManager : MonoBehaviour, IMinigameAudioManager
     public void PlayLose()
     {
         minigameSource.PlayOneShot(minigameLose);
+        minigameSource.PlayOneShot(whoosh, 1.5f);
     }
 
 

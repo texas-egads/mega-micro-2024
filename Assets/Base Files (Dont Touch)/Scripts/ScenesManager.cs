@@ -22,7 +22,7 @@ public class ScenesManager : MonoBehaviour
             // TODO maybe do something here
             return;
         }
-
+        /*
 #if UNITY_EDITOR
         // we find the corresponding minigame definition by searching through our assets and picking it out
         // this is so that jammers don't have to modify the Managers prefab in order to add their minigame to the list
@@ -49,6 +49,7 @@ public class ScenesManager : MonoBehaviour
             
             LoadSceneImmediate(mainSceneName);
         }
+        */
     }
 
 

@@ -29,6 +29,6 @@ public class CreditsManager : MonoBehaviour
         panelHolder.Translate(Vector2.up * Input.GetAxis("Vertical") * speed * Time.deltaTime);
         float panelY = Mathf.Clamp(panelHolder.anchoredPosition.y, 0, 270 * (count-1));
         panelHolder.anchoredPosition = new Vector2(panelHolder.anchoredPosition.x, panelY);
-        bg.anchoredPosition = new Vector2(bg.anchoredPosition.x, (panelY * 150 / (270 * (count - 1)))-300);
+        bg.anchoredPosition = new Vector2(bg.anchoredPosition.x, (panelY * 100 / (270 * (count - 1)))-300);
     }
 }

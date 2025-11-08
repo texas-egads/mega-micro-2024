@@ -14,6 +14,7 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
     [SerializeField] private List<MinigameDefinition> allMinigames;
     [SerializeField] private int numRoundsInEasyMode;
     [SerializeField] private int numRoundsInNormalMode;
+    [SerializeField] private int numRoundsInHardMode;
     [SerializeField] private GameObject coverPrefab;
     public int numRoundsDebug { get { return numRoundsInNormalMode; }} 
 
@@ -70,28 +71,20 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
         normalMinigames.Shuffle();
 
         // check that we have enough normal minigames to cover the number of rounds
-        if (normalMinigames.Count < numberOfRounds) {
+        if (normalMinigames.Count < numberOfRounds+3) {
             //Debug.LogWarning($"There are only {normalMinigames.Count} normal minigames, which isn't enough to fill {numberOfRounds} rounds. This is fine for testing but it shouldn't happen when all of the minigames are assembled.");
         
             int numNormalMinigames = normalMinigames.Count;
             int iOffset = 0;
-            for (int i = numNormalMinigames; i < numberOfRounds; i++) {
+            for (int i = numNormalMinigames; i < numberOfRounds+3; i++) {
                 normalMinigames.Add(normalMinigames[iOffset % numNormalMinigames]);
                 iOffset += UnityEngine.Random.Range(1, numNormalMinigames);
             }
         }
 
-        for (int i = 0; i < numberOfRounds; i++) {
-            if (i == (numberOfRounds - 1) / 2 && miniboss != null) {
-                AddMinigameToList(miniboss);
-            }
-            else if (i == numberOfRounds - 1 && boss != null) {
-                AddMinigameToList(boss);
-            }
-            else {
-                AddMinigameToList(normalMinigames.Last());
-                normalMinigames.RemoveAt(normalMinigames.Count - 1);
-            }
+        for (int i = 0; i < numberOfRounds+3; i++) {
+            AddMinigameToList(normalMinigames.Last());
+            normalMinigames.RemoveAt(normalMinigames.Count - 1);
         }
     }
 
@@ -101,7 +94,8 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
 
     public void StartMinigames() {
         if (minigames.Count == 0) {
-            PopulateMinigameList(numRoundsInNormalMode);
+            PopulateMinigameList(minigameDifficulty == Difficulty.EASY ? numRoundsInEasyMode : 
+                    minigameDifficulty == Difficulty.MEDIUM ? numRoundsInNormalMode : numRoundsInHardMode);
         }
 
         status.currentHealth = STARTING_LIVES;
@@ -209,7 +203,7 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
         }
 
         status.currentHealth += status.healthDelta;
-        if (status.nextRoundNumber >= minigames.Count && status.currentHealth > 0) {
+        if (status.nextRoundNumber+status.currentHealth >= minigames.Count && status.currentHealth > 0) {
             status.gameResult = WinLose.WIN;
             status.nextMinigame = null;
 
@@ -219,7 +213,7 @@ public class MinigamesManager : MonoBehaviour, IMinigamesManager
                 Instantiate(coverPrefab, transform.parent).GetComponent<Animator>().Play("fastClos");
             }, false);
             DOVirtual.DelayedCall(2.5f, () => {
-                SceneManager.LoadScene("WinScene");
+                SceneManager.LoadScene("WinScreen");
                 Destroy(transform.parent.gameObject);
             }, false);
         }
